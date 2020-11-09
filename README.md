@@ -1,4 +1,4 @@
-# PC-SmartPhone_Site
+# PC-Phone_Site
 **情報工学基礎実習II 6グループ**
 
 
