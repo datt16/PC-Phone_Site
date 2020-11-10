@@ -4,3 +4,6 @@
 
 ## 概要
 おすすめのパソコンやスマートフォンをまとめたWebサイトを作成中
+
+## デプロイ先
+https://pc-phone-site-bi9hqvcnu.vercel.app
