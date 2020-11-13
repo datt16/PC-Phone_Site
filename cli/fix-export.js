@@ -1,32 +1,48 @@
-var fs = require('fs')
-var path = require('path')
+const fs = require('fs')
+const path = require('path')
+const beautify = require('js-beautify')
 
 const outDirPath = path.join(__filename, '../../out')
+
+const beautifyOptions = {
+  indent_size: 2,
+  end_with_newline: true,
+  preserve_newlines: false,
+  max_preserve_newlines: 0,
+  wrap_line_length: 0,
+  wrap_attributes_indent_size: 0,
+}
 
 const readdirRecursively = (dir, files = []) => {
   const paths = fs.readdirSync(dir)
   const dirs = []
   for (const path of paths) {
-    const stats = fs.statSync(`${dir}/${path}`)
-    if (stats.isDirectory()) {
-      dirs.push(`${dir}/${path}`)
-    } else {
-      files.push(`${dir}/${path}`)
-    }
+    fs.statSync(`${dir}/${path}`).isDirectory() ? dirs.push(`${dir}/${path}`) : files.push(`${dir}/${path}`)
   }
-  for (const d of dirs) {
-    files = readdirRecursively(d, files)
-  }
-  return files.filter(file => file.match(/.*\.html$/))
+  for (const d of dirs) files = readdirRecursively(d, files)
+  return files.filter(file => file.match(/.*\.(html||js)$/))
 }
 
 const replaceText = (filePath) => {
   let relative = path.relative(path.dirname(filePath), outDirPath)
-  relative = (relative != '' ? `${relative}/` : relative)
   let text = fs.readFileSync(filePath).toString('utf-8')
-  text = text.replace(new RegExp('src="/', 'g'), `src="${relative}`)
-  text = text.replace(new RegExp('href="/', 'g'), `href="${relative}`)
-  fs.writeFileSync(filePath, text, (err) => {
+  let result = ''
+  const isHTML = filePath.match(/.*\.html$/)
+  const isJS = filePath.match(/.*\.js$/)
+
+  relative = (relative != '' ? `${relative}/` : relative)
+
+  if (isHTML) {
+    text = text.replace(new RegExp('src="/', 'g'), `src="${relative}`)
+               .replace(new RegExp('href="/', 'g'), `href="${relative}`)
+               .replace('&quot;', '\'')
+    result = beautify.html(text, beautifyOptions)
+  } else if (isJS) {
+    result = beautify.js(text, beautifyOptions)
+  }
+
+
+  fs.writeFileSync(filePath, result, (err) => {
     if (err) console.log(err)
   })
 }
