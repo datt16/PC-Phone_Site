@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export && node ./cli/fix-export.js"
+    "export": "next build && next export && node ./cli/fix-export.js",
+    "lint": "eslint --fix"
   },
   "dependencies": {
     "next": "10.0.1",
