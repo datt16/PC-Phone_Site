@@ -1,6 +1,8 @@
 import styles from "../styles/ItemCard.module.css";
 import Link from "next/link";
 
+import { AiOutlineTags } from "react-icons/ai";
+
 const itemCard = (props) => {
   return (
     <Link href="https://google.com">
@@ -11,7 +13,14 @@ const itemCard = (props) => {
             <img src={props.data.image ? props.data.image : '/000000-0.png'} />
           </div>
           <span className={styles.name}>{ props.data.name }</span>
-          <span className={styles.description}>{ props.data.tags ? props.data.tags.join(', ') : '' }</span>
+          <span className={styles.tags}>
+            <AiOutlineTags size={21} />
+            { props.data.tags
+              ? props.data.tags.map((t) => {
+                return <span className={styles.tag}>#{ t }</span>
+              })
+              : '' }
+          </span>
         </>}
       </a>
     </Link>
