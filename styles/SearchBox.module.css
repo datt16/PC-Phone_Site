@@ -1,0 +1,38 @@
+.form2 {
+  display: flex;
+  position: relative;
+  max-width: 300px;
+}
+
+.sbox2 {
+  height: 25px;
+  padding: 0 10px;
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  border-radius: 2px;
+  outline: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: solid 1px #4b4b4b;
+}
+
+.sbtn2 {
+  display: flex;
+  height: 25px;
+  /* position: absolute; */
+  left: 255px; /*アイコン左右の位置調整*/
+  top: 0;
+  background: none;
+  color: #666;
+  border: none;
+  font-size: 20px; /*アイコンサイズ*/
+}
+
+.sbtn2:hover {
+  color: #7fbfff;
+}
+
+.sbtn5:hover {
+  color: #7fbfff;
+}
