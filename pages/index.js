@@ -3,6 +3,18 @@ import styles from "../styles/Home.module.css";
 import ItemCard from "../components/itemCard";
 
 export default function Home() {
+  const data = [
+    {
+      name: 'iPhone X',
+      image: '/iPhone-X.jpg',
+      tags: [
+        'Apple',
+        'iPhone',
+        'iOS',
+        'Previous',
+      ],
+    },
+  ]
   return (
     <div className={styles.container}>
       <Head>
@@ -12,10 +24,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
+          {data.map((d) => {
+            return <ItemCard data={d} />
+          })}
         </div>
       </main>
     </div>
