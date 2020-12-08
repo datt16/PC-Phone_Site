@@ -1,13 +1,21 @@
 import styles from "../styles/ItemCard.module.css";
 import Link from "next/link";
 
-export default function itemCard() {
+const itemCard = (props) => {
   return (
     <Link href="https://google.com">
       <a className={styles.card}>
-        <h3>iPhone 12 Pro Max</h3>
-        <p>全く新しい最先端のテクノロジーを搭載した驚くべきゲーミング携帯電話</p>
+        {props && props.data &&
+        <>
+          <div className={styles.image}>
+            <img src={props.data.image ? props.data.image : '/000000-0.png'} />
+          </div>
+          <span className={styles.name}>{ props.data.name }</span>
+          <span className={styles.description}>{ props.data.tags ? props.data.tags.join(', ') : '' }</span>
+        </>}
       </a>
     </Link>
   );
 }
+
+export default itemCard
