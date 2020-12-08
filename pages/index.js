@@ -14,6 +14,16 @@ export default function Home() {
         'Previous',
       ],
     },
+    {
+      name: 'iPad Pro',
+      image: '/iPad-Pro.jpg',
+      tags: [
+        'Apple',
+        'iPad',
+        'iOS',
+        'Latest',
+      ],
+    },
   ]
   return (
     <div className={styles.container}>
@@ -24,8 +34,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          {data.map((d) => {
-            return <ItemCard data={d} />
+          {data.map((d, index) => {
+            return <ItemCard key={index} data={d} />
           })}
         </div>
       </main>
