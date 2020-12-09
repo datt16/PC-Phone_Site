@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Header.module.css'
-import SearchBox from "./searchbox";
+import SearchBox from './searchbox'
 
 const Header = function Header() {
   return (
