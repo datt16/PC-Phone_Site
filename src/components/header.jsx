@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/Header.module.css'
+import SearchBox from "./searchbox";
 
 const Header = function Header() {
   return (
@@ -7,7 +8,7 @@ const Header = function Header() {
       <h1>
         <a href="/">title</a>
       </h1>
-      <nav className="">
+      <nav className={styles.nav}>
         <ul>
           <li>
             <a href="#">ABOUT</a>
@@ -19,7 +20,7 @@ const Header = function Header() {
             <a href="#">Phone</a>
           </li>
           <li>
-            <a href="#">Search</a>
+            <SearchBox />
           </li>
         </ul>
       </nav>
