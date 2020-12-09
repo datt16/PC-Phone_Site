@@ -32,3 +32,22 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getStaticPaths() {
+  return {
+    paths: articles.map((article) => {
+      return {
+        params: {
+          id: `${article.id}`,
+        },
+      }
+    }),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  return {
+    props: articles.find(a => a.id == params.id),
+  }
+}
