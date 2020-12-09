@@ -1,7 +1,8 @@
-import Head from "next/head";
-import styles from "../../styles/Home.module.css";
-import ItemCard from "../../components/itemCard";
-import articles from "../../lib/articles"
+import React from 'react'
+import Head from 'next/head'
+import styles from '../../styles/Home.module.css'
+import ItemCard from '../../components/itemCard'
+import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
         </div>
       </main>
     </div>
-  );
+  )
 }
 
 export async function getStaticPaths() {

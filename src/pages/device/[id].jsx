@@ -1,6 +1,7 @@
-import Head from "next/head";
-import styles from "../../styles/Device.module.css";
-import articles from "../../lib/articles";
+import React from 'react'
+import Head from 'next/head'
+import styles from '../../styles/Device.module.css'
+import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
         )}
       </main>
     </div>
-  );
+  )
 }
 
 export async function getStaticPaths() {

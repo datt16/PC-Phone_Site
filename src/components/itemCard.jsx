@@ -1,7 +1,8 @@
-import styles from "../styles/ItemCard.module.css";
-import Link from "next/link";
+import React from 'react'
+import styles from '../styles/ItemCard.module.css'
+import Link from 'next/link'
 
-import { AiOutlineTags } from "react-icons/ai";
+import { AiOutlineTags } from 'react-icons/ai'
 
 const itemCard = (props) => {
   return (
@@ -24,7 +25,7 @@ const itemCard = (props) => {
         </>}
       </a>
     </Link>
-  );
+  )
 }
 
 export default itemCard

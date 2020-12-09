@@ -1,5 +1,6 @@
-import "../styles/globals.css";
-import Header from "../components/header.jsx";
+import React from 'react'
+import '../styles/globals.css'
+import Header from '../components/header.jsx'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
     </div>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

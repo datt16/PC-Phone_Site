@@ -1,6 +1,7 @@
-import styles from "../styles/SearchBox.module.css";
-import { AiOutlineSearch } from "react-icons/ai";
-import Link from "next/link";
+import React from 'react'
+import styles from '../styles/SearchBox.module.css'
+import { AiOutlineSearch } from 'react-icons/ai'
+import Link from 'next/link'
 
 export default function SerachBox() {
   return (
@@ -11,5 +12,5 @@ export default function SerachBox() {
         </a>
       </Link>
     </div>
-  );
+  )
 }

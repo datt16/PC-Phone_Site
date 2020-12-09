@@ -1,6 +1,7 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import ItemCard from "../components/itemCard";
+import Head from 'next/head'
+import React from 'react'
+import styles from '../styles/Home.module.css'
+import ItemCard from '../components/itemCard'
 import { useRouter } from 'next/router'
 import { searchAllTags, searchAnyTags } from '../lib/search'
 
@@ -26,5 +27,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-  );
+  )
 }

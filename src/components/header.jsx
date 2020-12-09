@@ -1,7 +1,8 @@
-import styles from "../styles/Header.module.css";
-import SearchBox from "./searchbox";
+import React from 'react'
+import styles from '../styles/Header.module.css'
+import SearchBox from './searchbox'
 
-export default function Header() {
+const Header = function Header() {
   return (
     <header className={styles.header}>
       <h1>
@@ -24,5 +25,7 @@ export default function Header() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
+
+export default Header
