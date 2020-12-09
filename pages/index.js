@@ -13,8 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          {data.map((d, index) => {
-            return <ItemCard key={index} data={d} />
+          {data.map((d) => {
+            return <ItemCard key={d.name} data={d} />
           })}
         </div>
       </main>
