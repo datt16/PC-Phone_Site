@@ -7,7 +7,10 @@ import { searchAllTags, searchAnyTags } from '../lib/search'
 
 export default function Home() {
   const router = useRouter()
-  const { type, tags } = router.query
+  const { type, tags, mode } = router.query
+  const list = !mode ? []
+            : (mode === 'and') ? searchAllTags(tags ? tags.split(',') : [], type ? type : '')
+            : searchAnyTags(tags ? tags.split(',') : [], type ? type : '')
   return (
     <div className={styles.container}>
       <Head>
@@ -16,18 +19,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {(type || tags) && (
-          <>
-            <div className={styles.grid}>
-              {searchAnyTags(tags.split(','), type).map((d) => {
-                return <ItemCard key={d.name} data={d} />
-              })}
-              {/* {searchAllTags(tags.split(','), type).map((d) => {
-                return <ItemCard key={d.name} data={d} />
-              })} */}
-            </div>
-          </>
-        )}
+        <div className={styles.grid}>
+          {list.map((l) => {
+            return <ItemCard key={l.name} data={l} />
+          })}
+        </div>
       </main>
     </div>
   );
