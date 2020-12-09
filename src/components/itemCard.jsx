@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from '../styles/ItemCard.module.css'
 import Link from 'next/link'
 

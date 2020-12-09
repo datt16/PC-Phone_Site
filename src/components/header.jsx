@@ -1,6 +1,7 @@
+import React from 'react'
 import styles from '../styles/Header.module.css'
 
-export default function Header() {
+const Header = function Header() {
   return (
     <header className={styles.header}>
       <h1>
@@ -25,3 +26,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header

@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Device.module.css'
 import articles from '../../lib/articles'
