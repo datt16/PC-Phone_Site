@@ -1,4 +1,5 @@
 import styles from "../styles/Header.module.css";
+import SearchBox from "./searchbox";
 
 export default function Header() {
   return (
@@ -6,7 +7,7 @@ export default function Header() {
       <h1>
         <a href="/">title</a>
       </h1>
-      <nav className="">
+      <nav className={styles.nav}>
         <ul>
           <li>
             <a href="#">ABOUT</a>
@@ -18,7 +19,7 @@ export default function Header() {
             <a href="#">Phone</a>
           </li>
           <li>
-            <a href="#">Search</a>
+            <SearchBox />
           </li>
         </ul>
       </nav>
