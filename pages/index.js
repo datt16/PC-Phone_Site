@@ -1,30 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import ItemCard from "../components/itemCard";
+import data from "../lib/data";
 
 export default function Home() {
-  const data = [
-    {
-      name: 'iPhone X',
-      image: '/iPhone-X.jpg',
-      tags: [
-        'Apple',
-        'iPhone',
-        'iOS',
-        'Previous',
-      ],
-    },
-    {
-      name: 'iPad Pro',
-      image: '/iPad-Pro.jpg',
-      tags: [
-        'Apple',
-        'iPad',
-        'iOS',
-        'Latest',
-      ],
-    },
-  ]
   return (
     <div className={styles.container}>
       <Head>
