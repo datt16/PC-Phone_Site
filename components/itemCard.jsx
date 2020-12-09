@@ -5,7 +5,7 @@ import { AiOutlineTags } from "react-icons/ai";
 
 const itemCard = (props) => {
   return (
-    <Link href="https://google.com">
+    <Link href={`/device/${props.data.id}`}>
       <a className={styles.card}>
         {props && props.data &&
         <>
