@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import ItemCard from "../components/itemCard";
 import { useRouter } from 'next/router'
 import { searchAllTags, searchAnyTags } from '../lib/search'
