@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-import Header from "../components/header.js";
+import '../styles/globals.css'
+import Header from '../components/header.js'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
     </div>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

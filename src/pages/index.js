@@ -1,7 +1,7 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import ItemCard from "../components/itemCard";
-import articles from "../lib/articles";
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import ItemCard from '../components/itemCard'
+import articles from '../lib/articles'
 
 export default function Home() {
   return (
@@ -19,5 +19,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-  );
+  )
 }
