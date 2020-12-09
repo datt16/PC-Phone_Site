@@ -1,14 +1,16 @@
 import styles from "../styles/SearchBox.module.css";
 import { AiOutlineSearch } from "react-icons/ai";
+import Link from "next/link";
 
 export default function SerachBox() {
   return (
     <div>
-      <form id="sform" action="#" method="get" className={styles.form2}>
-        <button type="submit" id="sbtn" className={styles.sbtn2}>
+      {/* URL : /search?tags=apple&type=mobile&mode=and */}
+      <Link href="/search?tags=apple&type=mobile&mode=and">
+        <a className={styles.link}>
           <AiOutlineSearch />
-        </button>
-      </form>
+        </a>
+      </Link>
     </div>
   );
 }

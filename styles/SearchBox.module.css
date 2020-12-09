@@ -1,10 +1,4 @@
-.form2 {
-  display: flex;
-  position: relative;
-  max-width: 300px;
-}
-
-.sbtn2 {
+.link {
   display: flex;
   background: none;
   color: #666;
@@ -12,18 +6,6 @@
   font-size: 20px; /*アイコンサイズ*/
   align-items: center;
 }
-
-.sbtn2:hover {
+.link:hover {
   color: #7fbfff;
-}
-
-.sbtn5:hover {
-  color: #7fbfff;
-}
-
-@media (max-width: 480px) {
-  .sbox2 {
-    visibility: hidden;
-    max-width: 0px;
-  }
 }
