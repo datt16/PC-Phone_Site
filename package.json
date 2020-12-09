@@ -9,6 +9,11 @@
     "export": "next build && next export && node ./cli/fix-export.js",
     "lint": "eslint 'src/**/*.{js,jsx}' *.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint --fix"
+    }
+  },
   "dependencies": {
     "next": "10.0.3",
     "react": "17.0.1",
@@ -20,6 +25,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.5",
     "js-beautify": "^1.13.0",
     "prettier": "^2.2.1"
   }
