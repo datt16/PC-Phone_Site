@@ -22,7 +22,9 @@ export default function Home() {
             <h1>{ article.name }</h1>
             <p>Type: { article.type }</p>
             <p>Tags: { article.tags.join(', ') }</p>
-            <img className={styles.img} src={article.image} />
+            <div className={styles.imgbox}>
+              <img className={styles.img} src={article.image} />
+            </div>
             <ReactMarkdown>
               {article.content}
             </ReactMarkdown>

@@ -7,6 +7,12 @@
   flex-direction: column;
 }
 
+.imgbox {
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
 .img {
   max-width: 100%;
   margin: 1rem 0;
