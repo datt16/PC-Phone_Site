@@ -1,7 +1,7 @@
 ---
 id: 'iPhone-X'
 name: 'iPhone X'
-image: '/iPhone X.jpg'
+image: '/iPhone-X.jpg'
 type: 'mobile'
 tags: ['Apple', 'iPhone', 'iOS', 'Previous']
 ---
