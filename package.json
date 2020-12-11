@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export && node ./cli/fix-export.js",
+    "gen:articles": "node ./cli/gen-articles",
     "lint": "eslint 'src/**/*.{js,jsx}' *.js"
   },
   "husky": {
@@ -18,7 +19,8 @@
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "react-markdown": "^5.0.3"
   },
   "devDependencies": {
     "eslint": "^7.15.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-react": "^7.21.5",
     "husky": "^4.3.5",
     "js-beautify": "^1.13.0",
+    "markdown-yaml-metadata-parser": "^2.1.1",
     "prettier": "^2.2.1"
   }
 }
