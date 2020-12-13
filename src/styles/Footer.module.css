@@ -3,9 +3,38 @@
   height: 20vh;
   background: rgb(43, 43, 43);
   color: white;
+  display: flex;
+  align-items: center;
 }
 
-.nav {
+.caption {
+  flex-flow: column;
+  margin: 0 0 0 20px;
+}
+
+.caption h1 {
+  display: inline;
+  font-weight: bold;
+}
+
+.caption span {
+  margin: 0;
+  font-weight: 100;
+}
+
+.footer nav {
   display: flex;
   align-content: center;
+  align-self: center;
+  margin: 0 0 0 auto;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+.footer li {
+  margin: 0 0 0 15px;
+  font-size: 16pt;
 }
