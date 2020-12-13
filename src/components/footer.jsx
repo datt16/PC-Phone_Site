@@ -4,7 +4,6 @@ import styles from '../styles/Footer.module.css'
 const Footer = function Footer() {
   return (
     <footer className={styles.footer}>
-      <object type="image/svg+xml" data="/site-icon.svg" className={styles.icon}></object>
       <div className={styles.caption}>
         <h1>
           <a href="/">PC-Phone Site</a>
