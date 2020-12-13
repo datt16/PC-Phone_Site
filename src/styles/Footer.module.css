@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.icon {
+  height: 96px;
+}
+
 .caption {
   flex-flow: column;
   margin: 0 0 0 20px;
