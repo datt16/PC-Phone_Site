@@ -34,8 +34,8 @@ const replaceText = (filePath) => {
 
   if (isHTML) {
     text = text.replace(new RegExp('src="/', 'g'), `src="${relative}`)
-               .replace(new RegExp('href="/', 'g'), `href="${relative}`)
-               .replace('&quot;', '\'')
+      .replace(new RegExp('href="/', 'g'), `href="${relative}`)
+      .replace('&quot;', '\'')
     result = beautify.html(text, beautifyOptions)
   } else if (isJS) {
     result = beautify.js(text, beautifyOptions)

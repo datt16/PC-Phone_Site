@@ -19,7 +19,7 @@ for (let p of paths) {
       `    type: '${result.metadata.type}',\n` +
       `    tags: [${tags}],\n` +
       `    content: '${(result.content.startsWith('\n') ? result.content.replace(/^\n/, '') : result.content).replace(/\n/g, '\\n')}',\n` +
-    `  },\n`
+    '  },\n'
     console.log(`${fileName} が見つかりました`)
   }
 }
