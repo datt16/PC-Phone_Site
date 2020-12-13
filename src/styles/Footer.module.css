@@ -1,6 +1,6 @@
 .footer {
   padding: 10px 40px;
-  height: 20vh;
+  height: 160px;
   background: rgb(43, 43, 43);
   color: white;
   display: flex;
@@ -42,7 +42,6 @@
   font-size: 16pt;
   position: relative;
 }
-
 .footer li::before {
   content: "";
   position: absolute;
@@ -55,4 +54,13 @@
   height: 14pt;
   background-color: aquamarine;
   align-content: center;
+}
+
+@media (max-width: 500px) {
+  .caption h1 {
+    font-size: 1em;
+  }
+  .icon {
+    height: 64px;
+  }
 }
