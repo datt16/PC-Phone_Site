@@ -35,6 +35,20 @@
 }
 
 .footer li {
-  margin: 0 0 0 15px;
   font-size: 16pt;
+  position: relative;
+}
+
+.footer li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  margin: auto;
+  top: 4px;
+  bottom: 0px;
+  left: -6px;
+  width: 3px;
+  height: 14pt;
+  background-color: aquamarine;
+  align-content: center;
 }
