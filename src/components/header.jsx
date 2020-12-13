@@ -11,9 +11,6 @@ const Header = function Header() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">ABOUT</a>
-          </li>
-          <li>
             <a href="#">PC</a>
           </li>
           <li>

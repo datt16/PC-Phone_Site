@@ -10,9 +10,6 @@ const Footer = function Footer() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">ABOUT</a>
-          </li>
-          <li>
             <a href="#">PC</a>
           </li>
           <li>
