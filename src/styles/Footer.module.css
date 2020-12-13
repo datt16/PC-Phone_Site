@@ -51,12 +51,3 @@
   background-color: aquamarine;
   align-content: center;
 }
-
-@media (max-width: 500px) {
-  .caption h1 {
-    font-size: 1em;
-  }
-  .icon {
-    height: 64px;
-  }
-}
