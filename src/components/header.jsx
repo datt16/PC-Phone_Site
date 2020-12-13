@@ -6,13 +6,10 @@ const Header = function Header() {
   return (
     <header className={styles.header}>
       <h1>
-        <a href="/">title</a>
+        <a href="/">PC-Phone Site</a>
       </h1>
       <nav className={styles.nav}>
         <ul>
-          <li>
-            <a href="#">ABOUT</a>
-          </li>
           <li>
             <a href="#">PC</a>
           </li>
