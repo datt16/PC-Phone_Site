@@ -24,13 +24,16 @@ export default function Home() {
       <main className={styles.main}>
         <div className="form">
           <label>検索</label>
-          <input
-            type="text"
-            name="todo"
-            onChange={filterList}
-            value={tmpQuery}
-          />
+          <select name="todo" value={tmpQuery} onChange={filterList}>
+            <option label="選択なし" value="">選択なし</option>
+            <optgroup label="tags">
+              <option label="Apple" value="apple">Apple</option>
+              <option label="iOS" value="ios">iOS</option>
+              <option label="latest" value="latest">latest</option>
+            </optgroup>
+          </select>
         </div>
+
         <div className={styles.grid}>
           {articles.map((l) => {
             return <ItemCard key={l.name} data={l} />
