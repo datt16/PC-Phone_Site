@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function SerachBox() {
   return (
     <div>
-      <Link href="/search?tags=apple&type=mobile&mode=and">
+      <Link href="/search">
         <a className={styles.link}>
           <AiOutlineSearch />
         </a>
