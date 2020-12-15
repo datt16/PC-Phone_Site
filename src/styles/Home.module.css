@@ -1,5 +1,6 @@
 .container {
-  padding: .5rem;
+  min-height: 100vh;
+  padding: 0.5rem;
   max-width: 2000px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,23 @@
   grid-template-columns: repeat(auto-fill, 400px);
   grid-row-gap: 1rem;
   grid-column-gap: 1rem;
+}
+
+.form {
+  padding: 4px 40px;
+  display: inline-flex;
+}
+
+.form label {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.form select {
+  color: #6a6a6a;
+  border: 1pt solid #b3b3b3;
+  min-width: 10rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 820px) {

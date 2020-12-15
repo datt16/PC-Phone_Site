@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className="form">
+        <div className={styles.form}>
           <label>検索</label>
           <select name="todo" value={tmpQuery} onChange={filterList}>
             <option label="選択なし" value="">選択なし</option>
