@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import ItemCard from '../../components/itemCard'
-import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
+import initialArticles from '../../lib/articles'
+import search from '../../lib/search'
 
 export default function Home() {
   const router = useRouter()
   let { type } = router.query
+  const [tmpQuery, setTmpQuery] = useState('')
+  const [articles, setArticles] = useState(initialArticles.filter(a => a.type == type))
   type = type ? type : ''
-  const list = articles.filter(a => a.type == type)
+  const filterList = (e) => {
+    const tag = e.target.value
+    const data = search(tag, type)
+    setArticles(data)
+    setTmpQuery(tag)
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -18,8 +26,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <div className="form">
+          <label>検索</label>
+          <input
+            type="text"
+            name="todo"
+            onChange={filterList}
+            value={tmpQuery}
+          />
+        </div>
         <div className={styles.grid}>
-          {list.map((l) => {
+          {articles.map((l) => {
             return <ItemCard key={l.name} data={l} />
           })}
         </div>
@@ -49,7 +66,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      list: articles.filter(a => a.type == params.type),
+      articles: initialArticles.filter(a => a.type == params.type),
     },
   }
 }
