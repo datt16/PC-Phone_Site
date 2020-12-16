@@ -1,5 +1,4 @@
 .container {
-  min-height: 100vh;
   padding: .5rem;
   max-width: 2000px;
   display: flex;
@@ -9,6 +8,7 @@
 
 .main {
   width: 100%;
+  margin-top: 10vh;
   align-items: center;
 }
 
