@@ -14,6 +14,18 @@ export default function Home() {
     setArticles(data)
     setTmpQuery(tag)
   }
+
+  // typeを条件によって変えられるようにする
+  let arr = []
+  initialArticles.filter(a => a.type == 'pc').forEach(item => {
+    item.tags.forEach(b => {
+      arr.push(b)
+    })
+  })
+  const tagList = Array.from(new Set(arr)).map((i) =>
+    <option key={i} value={i} label={i}>{i}</option>
+  )
+
   return (
     <div className={styles.container}>
       <Head>
@@ -27,9 +39,7 @@ export default function Home() {
           <select name="todo" value={tmpQuery} onChange={filterList}>
             <option label="選択なし" value="">選択なし</option>
             <optgroup label="tags">
-              <option label="Apple" value="apple">Apple</option>
-              <option label="iOS" value="ios">iOS</option>
-              <option label="latest" value="latest">latest</option>
+              {tagList}
             </optgroup>
           </select>
         </div>
