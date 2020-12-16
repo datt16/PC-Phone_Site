@@ -51,3 +51,12 @@
   background-color: aquamarine;
   align-content: center;
 }
+
+@media (max-width: 820px) {
+  .footer {
+    padding: 1rem;
+  }
+  .caption {
+    margin: 0;
+  }
+}
