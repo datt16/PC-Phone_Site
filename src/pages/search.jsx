@@ -15,9 +15,8 @@ export default function Home() {
     setTmpQuery(tag)
   }
 
-  // typeを条件によって変えられるようにする
   let arr = []
-  initialArticles.filter(a => a.type == 'pc').forEach(item => {
+  initialArticles.filter(a => a.type == 'mobile').forEach(item => {
     item.tags.forEach(b => {
       arr.push(b)
     })
@@ -35,7 +34,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>検索</label>
+          <label>PCを探す</label>
           <select name="todo" value={tmpQuery} onChange={filterList}>
             <option label="選択なし" value="">選択なし</option>
             <optgroup label="tags">
