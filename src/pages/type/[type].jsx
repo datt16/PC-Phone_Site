@@ -29,6 +29,7 @@ export default function Home() {
   const tagList = Array.from(new Set(arr)).map((i) =>
     <option key={i} value={i} label={i}>{i}</option>
   )
+  const LabelText = type == 'pc' ? 'PC' : 'スマホ'
 
   useEffect(() => {
     setArticles(initialArticles.filter(a => a.type == type))
@@ -43,7 +44,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>PCを探す</label>
+          <label>{LabelText}を探す</label>
           <select name="todo" value={tmpQuery} onChange={filterList}>
             <option selected label="選択なし" value="">選択なし</option>
             <optgroup label="tags">
