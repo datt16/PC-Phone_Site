@@ -40,3 +40,9 @@
 .header a:active {
   text-decoration: underline;
 }
+
+@media (max-width: 820px) {
+  .header {
+    padding: 1rem;
+  }
+}
