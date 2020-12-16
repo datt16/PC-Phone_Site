@@ -1,5 +1,7 @@
 .header {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  width: 100vw;
   height: 10vh;
   padding: 10px 40px;
   background-color: rgb(255, 255, 255);
@@ -39,4 +41,10 @@
 .header a:focus,
 .header a:active {
   text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .header {
+    padding: 1rem;
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from '../styles/Header.module.css'
 import SearchBox from './searchbox'
 
@@ -6,15 +7,21 @@ const Header = function Header() {
   return (
     <header className={styles.header}>
       <h1>
-        <a href="/">PC-Phone Site</a>
+        <Link href="/">
+          <a>PC-Phone Site</a>
+        </Link>
       </h1>
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">PC</a>
+            <Link href="/type/[id]" as="/type/pc">
+              <a>PC</a>
+            </Link>
           </li>
           <li>
-            <a href="#">Phone</a>
+            <Link href="/type/[id]" as="/type/mobile">
+              <a>Phone</a>
+            </Link>
           </li>
           <li>
             <SearchBox />
