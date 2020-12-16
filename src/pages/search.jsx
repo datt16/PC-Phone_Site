@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   let arr = []
-  initialArticles.filter(a => a.type == 'mobile').forEach(item => {
+  initialArticles.forEach(item => {
     item.tags.forEach(b => {
       arr.push(b)
     })
@@ -34,7 +34,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>PCを探す</label>
+          <label>検索</label>
           <select name="todo" value={tmpQuery} onChange={filterList}>
             <option label="選択なし" value="">選択なし</option>
             <optgroup label="tags">
