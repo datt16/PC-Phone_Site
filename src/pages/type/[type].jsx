@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import ItemCard from '../../components/itemCard'
@@ -12,12 +12,18 @@ export default function Home() {
   const [tmpQuery, setTmpQuery] = useState('')
   const [articles, setArticles] = useState(initialArticles.filter(a => a.type == type))
   type = type ? type : ''
+
   const filterList = (e) => {
     const tag = e.target.value
     const data = search(tag, type)
     setArticles(data)
     setTmpQuery(tag)
   }
+
+  useEffect(() => {
+    setArticles(initialArticles.filter(a => a.type == type))
+  }, [type])
+
   return (
     <div className={styles.container}>
       <Head>
