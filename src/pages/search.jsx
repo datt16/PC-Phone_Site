@@ -14,6 +14,17 @@ export default function Home() {
     setArticles(data)
     setTmpQuery(tag)
   }
+
+  let arr = []
+  initialArticles.forEach(item => {
+    item.tags.forEach(b => {
+      arr.push(b)
+    })
+  })
+  const tagList = Array.from(new Set(arr)).map((i) =>
+    <option key={i} value={i} label={i}>{i}</option>
+  )
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,15 +33,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className="form">
+        <div className={styles.form}>
           <label>検索</label>
-          <input
-            type="text"
-            name="todo"
-            onChange={filterList}
-            value={tmpQuery}
-          />
+          <select name="todo" value={tmpQuery} onChange={filterList}>
+            <option label="選択なし" value="">選択なし</option>
+            <optgroup label="tags">
+              {tagList}
+            </optgroup>
+          </select>
         </div>
+
         <div className={styles.grid}>
           {articles.map((l) => {
             return <ItemCard key={l.name} data={l} />

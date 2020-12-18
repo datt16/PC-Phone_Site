@@ -20,6 +20,17 @@ export default function Home() {
     setTmpQuery(tag)
   }
 
+  let arr = []
+  initialArticles.filter(a => a.type == type).forEach(item => {
+    item.tags.forEach(b => {
+      arr.push(b)
+    })
+  })
+  const tagList = Array.from(new Set(arr)).map((i) =>
+    <option key={i} value={i} label={i}>{i}</option>
+  )
+  const LabelText = type == 'pc' ? 'PC' : 'スマホ'
+
   useEffect(() => {
     setArticles(initialArticles.filter(a => a.type == type))
   }, [type])
@@ -32,14 +43,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className="form">
-          <label>検索</label>
-          <input
-            type="text"
-            name="todo"
-            onChange={filterList}
-            value={tmpQuery}
-          />
+        <div className={styles.form}>
+          <label>{LabelText}を探す</label>
+          <select name="todo" value={tmpQuery} onChange={filterList}>
+            <option selected label="選択なし" value="">選択なし</option>
+            <optgroup label="tags">
+              {tagList}
+            </optgroup>
+          </select>
         </div>
         <div className={styles.grid}>
           {articles.map((l) => {
