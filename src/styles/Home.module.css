@@ -9,7 +9,7 @@
 
 .main {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 8vh;
   align-items: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .form {
-  padding: 4px 40px;
+  padding: 4px 40px 16px 40px;
   display: inline-flex;
 }
 
