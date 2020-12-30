@@ -9,7 +9,7 @@
 
 .main {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 8vh;
   align-items: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .form {
-  padding: 4px 40px;
+  padding: 4px 40px 16px 40px;
   display: inline-flex;
 }
 
@@ -34,11 +34,13 @@
 }
 
 .form select {
-  color: #6a6a6a;
-  border: 1pt solid #b3b3b3;
+  border: none;
+  border-bottom: 1pt solid #000000;
   min-width: 10rem;
+  
   font-size: 1rem;
 }
+
 
 @media (max-width: 820px) {
   .grid {
