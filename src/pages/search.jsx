@@ -36,6 +36,10 @@ export default function Home() {
         <div className={styles.form}>
           <label>検索</label>
           <select name="todo" value={tmpQuery} onChange={filterList}>
+            <div className="">
+              <p>テキスト</p>
+              <div className="">説明文</div>
+            </div>
             <option label="選択なし" value="">選択なし</option>
             <optgroup label="tags">
               {tagList}

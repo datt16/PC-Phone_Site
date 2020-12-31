@@ -24,13 +24,13 @@
 }
 
 .form {
-  padding: 4px 40px 16px 40px;
+  padding: 4px 40px 16px 3vw;
   display: inline-flex;
 }
 
 .form label {
   margin-right: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .form select {
