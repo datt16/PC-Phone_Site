@@ -5,6 +5,7 @@ export default function Modal(props) {
   const [isOpen, setOpen] = useState(props.open)
   const hide = () => {
     props.handleClose()
+    console.log('toHide')
     setOpen(false)
   }
   return (
