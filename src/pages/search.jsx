@@ -13,17 +13,15 @@ export default function Home() {
   const [open, setOpen] = useState(false)
 
   const handlerModalOepn = () => {
-    console.log('parent : opened')
     setOpen(true)
   }
 
   const handlerModalClose = () => {
-    console.log('parent : closed')
     setOpen(false)
   }
 
   const filterList = (e) => {
-    const tag = e.target.value
+    const tag = e
     const data = search(tag, '')
     setArticles(data)
     setTmpQuery(tag)
@@ -35,14 +33,14 @@ export default function Home() {
       arr.push(b)
     })
   })
-  const tagList = Array.from(new Set(arr)).map((i) => (
-    <option key={i} value={i} label={i}>
-      {i}
-    </option>
-  ))
+  // const tagList = Array.from(new Set(arr)).map((i) => (
+  //   <option key={i} value={i} name={i} label={i}>
+  //     {i}
+  //   </option>
+  // ))
 
   const ProtoList = Array.from(new Set(arr)).map((i) => (
-    <li key={i} value={i}>
+    <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
       {i}
     </li>
   ))
@@ -56,8 +54,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>検索</label>
-          <select name='todo' value={tmpQuery} onChange={filterList}>
+          <label>検索:&nbsp;{tmpQuery}</label>
+          {/* <select value={tmpQuery} onChange={filterList}>
             <div className=''>
               <p>テキスト</p>
               <div className=''>説明文</div>
@@ -66,9 +64,8 @@ export default function Home() {
               選択なし
             </option>
             <optgroup label='tags'>{tagList}</optgroup>
-          </select>
+          </select> */}
           <button onClick={handlerModalOepn}>open</button>
-
           <Modal open={open} handleClose={handlerModalClose} key={open}>
             <ul>{ProtoList}</ul>
           </Modal>
