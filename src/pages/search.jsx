@@ -10,6 +10,18 @@ import Modal from '../components/modal'
 export default function Home() {
   const [tmpQuery, setTmpQuery] = useState('')
   const [articles, setArticles] = useState(initialArticles)
+  const [open, setOpen] = useState(false)
+
+  const handlerModalOepn = () => {
+    console.log('parent : opened')
+    setOpen(true)
+  }
+
+  const handlerModalClose = () => {
+    console.log('parent : closed')
+    setOpen(false)
+  }
+
   const filterList = (e) => {
     const tag = e.target.value
     const data = search(tag, '')
@@ -55,7 +67,9 @@ export default function Home() {
             </option>
             <optgroup label='tags'>{tagList}</optgroup>
           </select>
-          <Modal isOpen={true}>
+          <button onClick={handlerModalOepn}>open</button>
+
+          <Modal open={open} handleClose={handlerModalClose} key={open}>
             <ul>{ProtoList}</ul>
           </Modal>
         </div>
