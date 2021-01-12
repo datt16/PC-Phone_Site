@@ -25,12 +25,27 @@
 
 .form {
   padding: 4px 40px 16px 3vw;
-  display: inline-flex;
+  display: flex;
 }
 
 .form label {
   margin-right: 1rem;
   font-size: 1.5rem;
+}
+
+.form button {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #000000;
+  border: solid 1px #000000;
+  background: transparent;
+  border-radius: 3px;
+  transition: .4s;
+}
+.form button:hover {
+  background: #000000;
+  color: white;
 }
 
 .form select {

@@ -1,11 +1,14 @@
 .wrapper {
     display: none;
+    position: fixed;
+    overflow: hidden;
+
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    position: fixed;
     z-index: 1;
+
     width: 100vw;
     height: 100vh;
     justify-content: center;
@@ -45,6 +48,7 @@
 }
 
 .frame {
+    overflow: visible scroll;
     background: white;
     width: 500px;
     height: 300px;
@@ -52,22 +56,41 @@
     margin: 0;
 }
 
+.frame h2 {
+    margin: 10px 15px;
+}
+
 .frame ul {
     margin: 0;
-    padding: 10px 10px;
+    padding: 0;
 }
 
 .frame li{
     list-style: none;
-    margin: 0.6em;
+    padding: 0.6rem 1rem;
 }
 
 .frame li:hover {
-    color: royalblue;
+    background: rgb(214, 214, 214);
     text-decoration: underline;
 }
 
 .selected {
     color: royalblue;
     
+}
+
+.frame div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.frame div > p {
+    margin: 0 1rem;
+    color: silver;
+}
+
+.frame div>p:hover {
+    color: black;
 }

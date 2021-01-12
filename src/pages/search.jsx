@@ -13,10 +13,12 @@ export default function Home() {
   const [open, setOpen] = useState(false)
 
   const handlerModalOepn = () => {
+    document.body.style.overflow = 'hidden'
     setOpen(true)
   }
 
   const handlerModalClose = () => {
+    document.body.style.overflow = ''
     setOpen(false)
   }
 
@@ -33,13 +35,8 @@ export default function Home() {
       arr.push(b)
     })
   })
-  // const tagList = Array.from(new Set(arr)).map((i) => (
-  //   <option key={i} value={i} name={i} label={i}>
-  //     {i}
-  //   </option>
-  // ))
 
-  const ProtoList = Array.from(new Set(arr)).map((i) => (
+  const ItemList = Array.from(new Set(arr)).map((i) => (
     <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
       {i}
     </li>
@@ -55,19 +52,13 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.form}>
           <label>検索:&nbsp;{tmpQuery}</label>
-          {/* <select value={tmpQuery} onChange={filterList}>
-            <div className=''>
-              <p>テキスト</p>
-              <div className=''>説明文</div>
-            </div>
-            <option label='選択なし' value=''>
-              選択なし
-            </option>
-            <optgroup label='tags'>{tagList}</optgroup>
-          </select> */}
-          <button onClick={handlerModalOepn}>open</button>
+          <button onClick={handlerModalOepn}>選択</button>
           <Modal open={open} handleClose={handlerModalClose} key={open}>
-            <ul>{ProtoList}</ul>
+            <div>
+              <h2>タグを選択してください</h2>
+              <p onClick={handlerModalClose}>X</p>
+            </div>
+            <ul>{ItemList}</ul>
           </Modal>
         </div>
 
