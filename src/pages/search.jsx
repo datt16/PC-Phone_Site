@@ -58,7 +58,12 @@ export default function Home() {
               <h2>タグを選択してください</h2>
               <p onClick={handlerModalClose}>X</p>
             </div>
-            <ul>{ItemList}</ul>
+            <ul>
+              <li value="" name="none" onClick={filterList.bind(this, '')}>
+                選択解除
+              </li>
+              {ItemList}
+            </ul>
           </Modal>
         </div>
 

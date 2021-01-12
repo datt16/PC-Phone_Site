@@ -72,12 +72,10 @@
 
 .frame li:hover {
     background: rgb(214, 214, 214);
-    text-decoration: underline;
 }
 
 .selected {
     color: royalblue;
-    
 }
 
 .frame div {
