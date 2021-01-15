@@ -1,50 +1,27 @@
 .wrapper {
-    display: none;
     position: fixed;
     overflow: hidden;
-
+    
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
-
+    
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-
+    
     background: rgba(10, 10, 10, 0.685);
-}
-
-@keyframes show {
-    from {
-        display: flex;
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes hide {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
 }
 
 .SHOW {
     display: flex;
-    animation: show 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);   
 }
 
 .HIDE {
-    animation: hide 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-    animation-fill-mode: forwards;
+    display: none;
 }
 
 .frame {
@@ -89,6 +66,6 @@
     color: silver;
 }
 
-.frame div>p:hover {
+.frame div > p:hover {
     color: black;
 }
