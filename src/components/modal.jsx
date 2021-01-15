@@ -15,5 +15,5 @@ export default function Modal(props) {
     >
       <div className={styles.frame}>{props.children}</div>
     </div>
-  );
+  )
 }

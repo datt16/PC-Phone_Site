@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import ItemCard from '../components/itemCard'
 import initialArticles from '../lib/articles'
 import search from '../lib/search'
-
 import Modal from '../components/modal'
 
 export default function Home() {
