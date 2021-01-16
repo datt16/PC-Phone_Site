@@ -1,0 +1,6 @@
+.outline {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 0, 255);
+}

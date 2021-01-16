@@ -5,29 +5,34 @@ import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 
+import DevicePreview from '../../components/devicePreview'
+
 export default function Home() {
   const router = useRouter()
   const { id } = router.query
-  const article = articles.find(a => a.id == id)
+  const article = articles.find((a) => a.id == id)
   return (
     <div className={styles.container}>
       <Head>
         <title>Search | PC Phone Site</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
         {article ? (
           <>
-            <h1>{ article.name }</h1>
-            <p>Type: { article.type }</p>
-            <p>Tags: { article.tags.join(', ') }</p>
+            <h1>{article.name}</h1>
+            <p>Type: {article.type}</p>
+            <p>Tags: {article.tags.join(', ')}</p>
             <div className={styles.imgbox}>
               <img className={styles.img} src={article.image} />
             </div>
-            <ReactMarkdown>
-              {article.content}
-            </ReactMarkdown>
+
+            <div className={styles.imgbox}>
+              <DevicePreview />
+            </div>
+
+            <ReactMarkdown>{article.content}</ReactMarkdown>
           </>
         ) : (
           <>
@@ -54,6 +59,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   return {
-    props: articles.find(a => a.id == params.id),
+    props: articles.find((a) => a.id == params.id),
   }
 }
