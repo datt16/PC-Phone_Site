@@ -2,16 +2,21 @@ import React, { Component } from 'react'
 import styles from '../styles/DevicePreview.module.css'
 
 const settings = {
-  width: 100,
-  height: 100,
+  width: 70.9,
+  height: 143.6,
+  depth: 7.7,
   inch: 6.8,
 }
 
 const staticStyles = {
-  base: {
-    background: '#323232',
-    width: '100px',
-    height: '100px',
+  size: {
+    width: '0',
+    height: '0',
+  },
+  window_size: {
+    width: '0',
+    height: '0',
+    transform: 'scale(0.9)',
   },
 }
 
@@ -24,22 +29,36 @@ class DevicePreview extends Component {
   }
 
   initialize(props) {
-    settings.width = props.width
-    settings.height = props.height
+    if (props.width == null) {
+      console.log('use default')
+      return
+    } else {
+      settings.width = props.width
+      settings.height = props.height
+    }
   }
 
   setSize() {
-    staticStyles.base.width = settings.width
-    staticStyles.base.height = settings.height
+    let v_width = (settings.width * 100) / 30,
+      v_height = (settings.height * 100) / 30
+    staticStyles.size.width = String(v_width) + 'pt'
+    staticStyles.size.height = String(v_height) + 'pt'
+    staticStyles.window_size.width = String(v_width) + 'pt'
+    staticStyles.window_size.height = String(v_height) + 'pt'
   }
 
   render() {
     return (
       <div
         ref={this.device}
+        style={staticStyles.size}
         className={styles.outline}
-        style={staticStyles.base}
-      ></div>
+      >
+        <div
+          className={styles.device_window}
+          style={staticStyles.window_size}
+        ></div>
+      </div>
     )
   }
 }

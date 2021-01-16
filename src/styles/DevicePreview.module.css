@@ -1,6 +1,10 @@
 .outline {
     content: "";
-    width: 100px;
-    height: 100px;
-    background: rgb(247, 0, 255);
+    width: 10px;
+    height: 10px;
+    background: #323232;
+}
+
+.device_window {
+    background: white;
 }
