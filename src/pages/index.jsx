@@ -18,10 +18,10 @@ export default function Home() {
         </div>
         <div className={styles.grid}>
           {articles.map((a) => {
-            return <ItemCard key={a.name} data={a} />;
+            return <ItemCard key={a.name} data={a} />
           })}
         </div>
       </main>
     </div>
-  );
+  )
 }
