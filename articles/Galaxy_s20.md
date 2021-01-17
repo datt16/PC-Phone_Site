@@ -8,7 +8,7 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Samsung', 'Android','Galaxy']
+tags: ['Samsung', 'Android', 'Galaxy']
 # キャリア
 carrier: ['au', 'docomo']
 # CPU
@@ -48,13 +48,18 @@ valuation: 5
 
 # Galaxy S20
 
-### 発売日時
-- 2020年2月11日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 2 月 11 日
+
+## 特徴
+
 ### 長所
+
 - 画面が比較的大きい
 - トリプルカメラ搭載
+
 ### 短所
+
 - 重く、少し持ちづらい
 - 価格が高め

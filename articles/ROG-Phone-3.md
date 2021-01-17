@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['ASUS','Android','Rog']
+tags: ['ASUS', 'Android', 'Rog']
 # キャリア
-carrier: ['simフリー',]
+carrier: ['simフリー']
 # CPU
 cpu: 'Snapdragon 865　Plus'
 # RAM
@@ -48,13 +48,18 @@ valuation: 5
 
 # Rog Phone3
 
-### 発売日時
-- 2020年9月26日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 9 月 26 日
+
+## 特徴
+
 ### 長所
+
 - ゲーミングスマートフォン
-- 60000mAhもの大容量バッテリー
+- 60000mAh もの大容量バッテリー
+
 ### 短所
+
 - 非常に高価
 - サイズが大きく重い

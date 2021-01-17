@@ -8,7 +8,7 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Sharp','Android','AQUOS']
+tags: ['Sharp', 'Android', 'AQUOS']
 # キャリア
 carrier: ['au', 'softbank']
 # CPU
@@ -48,13 +48,17 @@ valuation: 5
 
 # AQUOS zero5G basic
 
-### 発売日時
-- 2020年10月9日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 10 月 9 日
+
+## 特徴
+
 ### 長所
+
 - イヤホンジャック搭載や指紋認証など使いやすい
 - バッテリーが優秀
-### 短所
-- 重量が182gと重め
 
+### 短所
+
+- 重量が 182g と重め

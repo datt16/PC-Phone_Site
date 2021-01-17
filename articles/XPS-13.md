@@ -8,6 +8,6 @@ tags: ['Dell', 'Windows', 'Latest']
 
 # XPS 13
 
-XPSは、Dell（デル）のパーソナルコンピュータの一つである。 eXtreme Performance Systemの略。 
+XPS は、Dell（デル）のパーソナルコンピュータの一つである。 eXtreme Performance System の略。
 
-元々は、デスクトップ向けのDimensionシリーズの上位機種として発売され、後にノートブック向けのInspironシリーズの上位機種として投入される。今後は「Alienware」が後継シリーズとして投入する事が決定された為にXPSシリーズはミドルレンジのデスクトップとして存続していく方向である。 
+元々は、デスクトップ向けの Dimension シリーズの上位機種として発売され、後にノートブック向けの Inspiron シリーズの上位機種として投入される。今後は「Alienware」が後継シリーズとして投入する事が決定された為に XPS シリーズはミドルレンジのデスクトップとして存続していく方向である。

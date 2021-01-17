@@ -8,7 +8,7 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Sharp','Android','AQUOS']
+tags: ['Sharp', 'Android', 'AQUOS']
 # キャリア
 carrier: ['au', 'softbank']
 # CPU
@@ -33,7 +33,7 @@ weight: '177g'
 # カメラ
 camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
-biometrics: ['指紋','顔']
+biometrics: ['指紋', '顔']
 # 防水・防塵
 ipCode: 'IPX8'
 # 価格
@@ -48,13 +48,17 @@ valuation: 5
 
 # AQUOS sense4
 
-### 発売日時
-- 2020年11月6日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 11 月 6 日
+
+## 特徴
+
 ### 長所
+
 - バッテリーが優秀で長持ちする
 - サイズが小型で軽量
-### 短所
-- カメラ性能が普通
 
+### 短所
+
+- カメラ性能が普通
