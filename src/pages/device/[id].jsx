@@ -29,7 +29,7 @@ export default function Home() {
             </div>
 
             <div className={styles.imgbox}>
-              <DevicePreview />
+              <DevicePreview width={70.0} height={160.8} depth={6} inch={6.8} />
             </div>
 
             <ReactMarkdown>{article.content}</ReactMarkdown>

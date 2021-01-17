@@ -37,11 +37,13 @@ class DevicePreview extends Component {
 
   initialize(props) {
     if (props.width == null) {
-      console.log('[DEBUG](devicePreview) use default')
+      console.warn('[DEBUG](devicePreview) use default')
       return
     } else {
       settings.width = props.width
       settings.height = props.height
+      settings.depth = props.depth
+      settings.inch = props.inch
     }
   }
 
