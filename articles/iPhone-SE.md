@@ -1,8 +1,8 @@
 ---
 # 記事の ID になります
-id: 'iPhone 11'
+id: 'iPhone SE'
 # 一覧表示の時に表示される名前になります
-name: 'iPhone 11'
+name: 'iPhone SE'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
@@ -14,30 +14,30 @@ carrier: ['au', 'docomo','softbank']
 # CPU
 cpu: 'A13Bionicチップ'
 # RAM
-ram: '不明'
+ram: '12GB'
 # ROM || (HDD || SSD)
 storage: '64or128or256GB'
 # バッテリー
-battery: '3110mAh'
+battery: '1821mAh'
 # 画面サイズ
-screen: '6.1インチ'
+screen: '4.7インチ'
 # 本体サイズ
 ## 高さ
-height: '150.9mm'
+height: '138.4mm'
 ## 幅
-width: '75.7mm'
+width: '67.3mm'
 ## 厚さ
-thickness: '8.3mm'
+thickness: '7.3mm'
 # 重さ
-weight: '194g'
+weight: '148g'
 # カメラ
-camera: ['広角: 1200万画素', '超広角: 1200万画素']
+camera: ['広角: 1200万画素', '望遠: 1200万画素']
 # 生体認証
 biometrics: ['顔']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: 'IP67'
 # 価格
-price: 64800
+price: 44800
 # イヤホンジャック
 hasEarphone: false
 # 充電
@@ -46,15 +46,16 @@ charge: 'Lightning'
 valuation: 5
 ---
 
-# iPhone 11
+# iPhone SE
 
 ### 発売日時
-- 2019年9月20日
+- 2020年4月24日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- 小型でコンパクト
+- 非常に安価で高性能
 ### 短所
-- 重く、少し持ちづらい
-- 指紋認証がなくなった
+- イヤホンジャックがない
+  
+

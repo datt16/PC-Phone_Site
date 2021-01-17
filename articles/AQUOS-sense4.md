@@ -1,60 +1,60 @@
 ---
 # 記事の ID になります
-id: 'Galaxy S20'
+id: 'AQUOS sense4'
 # 一覧表示の時に表示される名前になります
-name: 'Galaxy S20'
+name: 'AQUOS sense4'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Samsung''Android','Galaxy']
+tags: ['Sharp','Android','AQUOS']
 # キャリア
-carrier: ['au', 'docomo']
+carrier: ['au', 'softbank']
 # CPU
-cpu: 'Snapdragon 865'
+cpu: 'Snapdragon'
 # RAM
-ram: '12GB'
+ram: '4GB'
 # ROM || (HDD || SSD)
-storage: '128GB'
+storage: '64GB'
 # バッテリー
-battery: '4000mAh'
+battery: '4570mAh'
 # 画面サイズ
-screen: '6.7インチ'
+screen: '5.8インチ'
 # 本体サイズ
 ## 高さ
-height: '158mm'
+height: '148mm'
 ## 幅
-width: '74mm'
+width: '71mm'
 ## 厚さ
-thickness: '7.8mm'
+thickness: '8.9mm'
 # 重さ
-weight: '163g'
+weight: '177g'
 # カメラ
-camera: ['広角: 1200万画素', '望遠: 6400万画素']
+camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
-biometrics: ['指紋', '顔']
+biometrics: ['指紋','顔']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: 'IPX8'
 # 価格
-price: 97460
+price: 35641
 # イヤホンジャック
-hasEarphone: false
+hasEarphone: true
 # 充電
 charge: 'Type-C'
 # 評価 (1 ~ 5)
 valuation: 5
 ---
 
-# Galaxy S20
+# AQUOS sense4
 
 ### 発売日時
-- 2020年2月11日
+- 2020年11月6日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- バッテリーが優秀で長持ちする
+- サイズが小型で軽量
 ### 短所
-- 重く、少し持ちづらい
-- 価格が高め
+- カメラ性能が普通
+

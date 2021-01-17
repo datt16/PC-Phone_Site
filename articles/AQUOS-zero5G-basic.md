@@ -1,60 +1,60 @@
 ---
 # 記事の ID になります
-id: 'Galaxy S20'
+id: 'AQUOS zero5G basic'
 # 一覧表示の時に表示される名前になります
-name: 'Galaxy S20'
+name: 'AQUOS zero5G basic'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Samsung''Android','Galaxy']
+tags: ['Sharp','Android','AQUOS']
 # キャリア
-carrier: ['au', 'docomo']
+carrier: ['au', 'softbank']
 # CPU
-cpu: 'Snapdragon 865'
+cpu: 'Snapdragon 765'
 # RAM
-ram: '12GB'
+ram: '8GB'
 # ROM || (HDD || SSD)
 storage: '128GB'
 # バッテリー
-battery: '4000mAh'
+battery: '4050mAh'
 # 画面サイズ
-screen: '6.7インチ'
+screen: '6.4インチ'
 # 本体サイズ
 ## 高さ
-height: '158mm'
+height: '161mm'
 ## 幅
-width: '74mm'
+width: '75mm'
 ## 厚さ
-thickness: '7.8mm'
+thickness: '9.0mm'
 # 重さ
-weight: '163g'
+weight: '182g'
 # カメラ
-camera: ['広角: 1200万画素', '望遠: 6400万画素']
+camera: ['広角: 1310万画素', '望遠: 800万画素']
 # 生体認証
 biometrics: ['指紋', '顔']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: 'IP5X'
 # 価格
-price: 97460
+price: 65520
 # イヤホンジャック
-hasEarphone: false
+hasEarphone: true
 # 充電
 charge: 'Type-C'
 # 評価 (1 ~ 5)
 valuation: 5
 ---
 
-# Galaxy S20
+# AQUOS zero5G basic
 
 ### 発売日時
-- 2020年2月11日
+- 2020年10月9日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- イヤホンジャック搭載や指紋認証など使いやすい
+- バッテリーが優秀
 ### 短所
-- 重く、少し持ちづらい
-- 価格が高め
+- 重量が182gと重め
+
