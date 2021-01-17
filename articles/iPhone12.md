@@ -1,8 +1,8 @@
 ---
 # 記事の ID になります
-id: 'iPhone 11'
+id: 'iPhone 12'
 # 一覧表示の時に表示される名前になります
-name: 'iPhone 11'
+name: 'iPhone 12'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
@@ -12,9 +12,9 @@ tags: ['Apple','iOS','iPhone']
 # キャリア
 carrier: ['au', 'docomo','softbank']
 # CPU
-cpu: 'A13Bionicチップ'
+cpu: 'A14Bionicチップ'
 # RAM
-ram: '不明'
+ram: '4GB'
 # ROM || (HDD || SSD)
 storage: '64or128or256GB'
 # バッテリー
@@ -23,21 +23,21 @@ battery: '3110mAh'
 screen: '6.1インチ'
 # 本体サイズ
 ## 高さ
-height: '150.9mm'
+height: '146.7mm'
 ## 幅
-width: '75.7mm'
+width: '71.5mm'
 ## 厚さ
-thickness: '8.3mm'
+thickness: '7.4mm'
 # 重さ
-weight: '194g'
+weight: '162g'
 # カメラ
-camera: ['広角: 1200万画素', '超広角: 1200万画素']
+camera: ['広角: 1200万画素', '望遠: 1200万画素']
 # 生体認証
 biometrics: ['顔']
 # 防水・防塵
 ipCode: 'IP68'
 # 価格
-price: 64800
+price: 91300
 # イヤホンジャック
 hasEarphone: false
 # 充電
@@ -46,15 +46,15 @@ charge: 'Lightning'
 valuation: 5
 ---
 
-# iPhone 11
+# iPhone 12
 
 ### 発売日時
-- 2019年9月20日
+- 2020年10月23日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- 11より小型で高性能
+- カメラ性能の向上
 ### 短所
-- 重く、少し持ちづらい
-- 指紋認証がなくなった
+- イヤホンジャックがない
+- 指紋認証がない

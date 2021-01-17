@@ -1,60 +1,60 @@
 ---
 # 記事の ID になります
-id: 'iPhone 11'
+id: 'Xperia 10 Ⅱ'
 # 一覧表示の時に表示される名前になります
-name: 'iPhone 11'
+name: 'Xperia 10 Ⅱ'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['Sony','Android','Xperia']
 # キャリア
 carrier: ['au', 'docomo','softbank']
 # CPU
-cpu: 'A13Bionicチップ'
+cpu: 'Snapdragon 665'
 # RAM
-ram: '不明'
+ram: '4GB'
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: '64GB'
 # バッテリー
-battery: '3110mAh'
+battery: '3600mAh'
 # 画面サイズ
-screen: '6.1インチ'
+screen: '4.7インチ'
 # 本体サイズ
 ## 高さ
-height: '150.9mm'
+height: '151mm'
 ## 幅
-width: '75.7mm'
+width: '67.3mm'
 ## 厚さ
-thickness: '8.3mm'
+thickness: '7.3mm'
 # 重さ
-weight: '194g'
+weight: '148g'
 # カメラ
-camera: ['広角: 1200万画素', '超広角: 1200万画素']
+camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
-biometrics: ['顔']
+biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: 'IP5X,IPX8'
 # 価格
-price: 64800
+price: 39600
 # イヤホンジャック
-hasEarphone: false
+hasEarphone: true
 # 充電
-charge: 'Lightning'
+charge: 'Type-C'
 # 評価 (1 ~ 5)
 valuation: 5
 ---
 
-# iPhone 11
+# Xperia 10 Ⅱ
 
 ### 発売日時
-- 2019年9月20日
+- 2020年5月29日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- 軽量でコンパクト
+- マルチウインドウを使いやすい
 ### 短所
-- 重く、少し持ちづらい
-- 指紋認証がなくなった
+- カメラ性能はそこそこ
+- サイズが縦長のため慣れが必要

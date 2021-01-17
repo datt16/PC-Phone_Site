@@ -1,60 +1,60 @@
 ---
 # 記事の ID になります
-id: 'iPhone 11'
+id: 'Rog Phone 3'
 # 一覧表示の時に表示される名前になります
-name: 'iPhone 11'
+name: 'Rog Phone 3'
 # 画像を指定します
 image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['ASUS','Android','Rog']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['simフリー',]
 # CPU
-cpu: 'A13Bionicチップ'
+cpu: 'Snapdragon 865　Plus'
 # RAM
-ram: '不明'
+ram: '12GB'
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: '512GB'
 # バッテリー
-battery: '3110mAh'
+battery: '6000mAh'
 # 画面サイズ
-screen: '6.1インチ'
+screen: '6.6インチ'
 # 本体サイズ
 ## 高さ
-height: '150.9mm'
+height: '171mm'
 ## 幅
-width: '75.7mm'
+width: '78mm'
 ## 厚さ
-thickness: '8.3mm'
+thickness: '7.9mm'
 # 重さ
-weight: '194g'
+weight: '240g'
 # カメラ
-camera: ['広角: 1200万画素', '超広角: 1200万画素']
+camera: ['広角: 1200万画素', '望遠: 6400万画素']
 # 生体認証
-biometrics: ['顔']
+biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: 'IP5X'
 # 価格
-price: 64800
+price: 142780
 # イヤホンジャック
 hasEarphone: false
 # 充電
-charge: 'Lightning'
+charge: 'Type-C'
 # 評価 (1 ~ 5)
 valuation: 5
 ---
 
-# iPhone 11
+# Rog Phone3
 
 ### 発売日時
-- 2019年9月20日
+- 2020年9月26日
   
 **特徴**
 ### 長所
-- 画面が比較的大きい
-- トリプルカメラ搭載
+- ゲーミングスマートフォン
+- 60000mAhもの大容量バッテリー
 ### 短所
-- 重く、少し持ちづらい
-- 指紋認証がなくなった
+- 非常に高価
+- サイズが大きく重い
