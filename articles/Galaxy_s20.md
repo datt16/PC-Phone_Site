@@ -8,7 +8,7 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Samsung''Android','Galaxy']
+tags: ['Samsung', 'Android','Galaxy']
 # キャリア
 carrier: ['au', 'docomo']
 # CPU
