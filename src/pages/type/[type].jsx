@@ -5,52 +5,78 @@ import ItemCard from '../../components/itemCard'
 import { useRouter } from 'next/router'
 import initialArticles from '../../lib/articles'
 import search from '../../lib/search'
+import Modal from '../../components/modal'
 
 export default function Home() {
   const router = useRouter()
   let { type } = router.query
   const [tmpQuery, setTmpQuery] = useState('')
-  const [articles, setArticles] = useState(initialArticles.filter(a => a.type == type))
+  const [open, setOpen] = useState(false)
+  const [articles, setArticles] = useState(
+    initialArticles.filter((a) => a.type == type)
+  )
   type = type ? type : ''
 
   const filterList = (e) => {
-    const tag = e.target.value
-    const data = search(tag, type)
+    const tag = e
+    const data = search(tag, '')
     setArticles(data)
     setTmpQuery(tag)
   }
 
+  const handlerModalOepn = () => {
+    document.body.style.overflow = 'hidden'
+    setOpen(true)
+  }
+
+  const handlerModalClose = () => {
+    document.body.style.overflow = ''
+    setOpen(false)
+  }
+
   let arr = []
-  initialArticles.filter(a => a.type == type).forEach(item => {
-    item.tags.forEach(b => {
-      arr.push(b)
+  initialArticles
+    .filter((a) => a.type == type)
+    .forEach((item) => {
+      item.tags.forEach((b) => {
+        arr.push(b)
+      })
     })
-  })
-  const tagList = Array.from(new Set(arr)).map((i) =>
-    <option key={i} value={i} label={i}>{i}</option>
-  )
+  
+  const ItemList = Array.from(new Set(arr)).map((i) => (
+    <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
+      {i}
+    </li>
+  ))
   const LabelText = type == 'pc' ? 'PC' : 'スマホ'
 
   useEffect(() => {
-    setArticles(initialArticles.filter(a => a.type == type))
+    setArticles(initialArticles.filter((a) => a.type == type))
   }, [type])
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Search | PC Phone Site</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>{LabelText}を探す</label>
-          <select name="todo" value={tmpQuery} onChange={filterList}>
-            <option selected label="選択なし" value="">選択なし</option>
-            <optgroup label="tags">
-              {tagList}
-            </optgroup>
-          </select>
+          <label>{LabelText}を探す:&nbsp;{tmpQuery}</label>
+          <button onClick={handlerModalOepn}>選択</button>
+          <Modal open={open} handleClose={handlerModalClose} key={open}>
+            <div>
+              <h2>タグを選択してください</h2>
+              <p onClick={handlerModalClose}>X</p>
+            </div>
+            <ul>
+              <li value='' name='none' onClick={filterList.bind(this, '')}>
+                選択解除
+              </li>
+              {ItemList}
+            </ul>
+          </Modal>
         </div>
         <div className={styles.grid}>
           {articles.map((l) => {
@@ -83,7 +109,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      articles: initialArticles.filter(a => a.type == params.type),
+      articles: initialArticles.filter((a) => a.type == params.type),
     },
   }
 }
