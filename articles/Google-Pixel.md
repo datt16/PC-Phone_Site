@@ -16,7 +16,7 @@ cpu: 'Snapdragon 765G'
 # RAM
 ram: '8GB'
 # ROM || (HDD || SSD)
-storage: 128GB'
+storage: '128GB'
 # バッテリー
 battery: '4080mAh'
 # 画面サイズ
