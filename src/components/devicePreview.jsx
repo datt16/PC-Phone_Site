@@ -10,6 +10,9 @@ const settings = {
 }
 
 const staticStyles = {
+  rootSize: {
+    height: '0',
+  },
   size: {
     width: '0',
     height: '0',
@@ -49,10 +52,15 @@ class DevicePreview extends Component {
     }
   }
 
+  show() {
+    console.warn('Hellollllllllllll')
+  }
+
   setSize() {
     let v_width = (settings.width * 100) / 30,
       v_height = (settings.height * 100) / 30,
       v_depth = (settings.depth * 100) / 30
+    staticStyles.rootSize.height = String(v_height + 60) + 'pt'
     staticStyles.size.width = String(v_width) + 'pt'
     staticStyles.size.height = String(v_height) + 'pt'
     staticStyles.window_size.width = String(v_width) + 'pt'
@@ -64,50 +72,52 @@ class DevicePreview extends Component {
 
   render() {
     return (
-      <div className={styles.wrapper}>
-        <div style={staticStyles.side_view_size} className={styles.side}>
-          <p className={`${styles.text} ${styles.text_depth}`}>
-            <span className={styles.caption}>厚さ</span>
-            <br />
-            {settings.depth + 'mm'}
-          </p>
-        </div>
-        <div
-          ref={this.device}
-          style={staticStyles.size}
-          className={styles.device_body}
-        >
-          <p className={`${styles.text} ${styles.text_width}`}>
-            <span className={styles.caption}>横幅</span>
-            <br />
-            {settings.width + 'mm'}
-          </p>
-
-          <p className={`${styles.text} ${styles.text_height}`}>
-            <span>
-              <span className={styles.caption}>高さ</span>
+      <div className={styles.root} style={staticStyles.rootSize}>
+        <div className={styles.wrapper}>
+          <div style={staticStyles.side_view_size} className={styles.side}>
+            <p className={`${styles.text} ${styles.text_depth}`}>
+              <span className={styles.caption}>厚さ</span>
               <br />
-              {settings.height + 'mm'}
-            </span>
-            <span className={`${styles.text} ${styles.text_weight}`}>
-              <span className={styles.caption}>重さ</span>
-              <br />
-              {settings.weight + 'g'}
-            </span>
-          </p>
-
+              {settings.depth + 'mm'}
+            </p>
+          </div>
           <div
-            className={styles.device_window}
-            style={staticStyles.window_size}
+            ref={this.device}
+            style={staticStyles.size}
+            className={styles.device_body}
           >
-            <span className={styles.window_text}>
-              {settings.inch}
-              <p>インチ</p>
-            </span>
+            <p className={`${styles.text} ${styles.text_width}`}>
+              <span className={styles.caption}>横幅</span>
+              <br />
+              {settings.width + 'mm'}
+            </p>
+
+            <p className={`${styles.text} ${styles.text_height}`}>
+              <span>
+                <span className={styles.caption}>高さ</span>
+                <br />
+                {settings.height + 'mm'}
+              </span>
+              <span className={`${styles.text} ${styles.text_weight}`}>
+                <span className={styles.caption}>重さ</span>
+                <br />
+                {settings.weight + 'g'}
+              </span>
+            </p>
+
             <div
-              className={styles.device_window_inner}
-              style={staticStyles.window_border}
-            ></div>
+              className={styles.device_window}
+              style={staticStyles.window_size}
+            >
+              <span className={styles.window_text}>
+                {settings.inch}
+                <p>インチ</p>
+              </span>
+              <div
+                className={styles.device_window_inner}
+                style={staticStyles.window_border}
+              ></div>
+            </div>
           </div>
         </div>
       </div>
