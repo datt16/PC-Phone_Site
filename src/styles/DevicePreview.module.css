@@ -63,7 +63,6 @@
 .device_window {
     background: white;
     border-color: #ffffff #ebebeb transparent transparent;
-    overflow: hidden;
 }
 
 .device_window_inner {
@@ -72,7 +71,30 @@
     border-style: solid;
 }
 
-.side {
+.window_text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 3.8rem;
+    
+    text-align: center;
+}
+.window_text p {
+    padding: 0;
+    margin: 25px 0 0 2px;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.side {   
     position: relative;
     margin-right: 2em;
     border: 1px solid #303030;

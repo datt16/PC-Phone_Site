@@ -100,6 +100,10 @@ class DevicePreview extends Component {
             className={styles.device_window}
             style={staticStyles.window_size}
           >
+            <span className={styles.window_text}>
+              {settings.inch}
+              <p>インチ</p>
+            </span>
             <div
               className={styles.device_window_inner}
               style={staticStyles.window_border}
