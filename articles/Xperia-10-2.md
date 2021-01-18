@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Sony','Android','Xperia']
+tags: ['Sony', 'Android', 'Xperia']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'softbank']
 # CPU
 cpu: 'Snapdragon 665'
 # RAM
@@ -48,13 +48,18 @@ valuation: 5
 
 # Xperia 10 Ⅱ
 
-### 発売日時
-- 2020年5月29日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 5 月 29 日
+
+## 特徴
+
 ### 長所
+
 - 軽量でコンパクト
 - マルチウインドウを使いやすい
+
 ### 短所
+
 - カメラ性能はそこそこ
 - サイズが縦長のため慣れが必要

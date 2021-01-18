@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'softbank']
 # CPU
 cpu: 'A13Bionicチップ'
 # RAM
@@ -48,13 +48,18 @@ valuation: 5
 
 # iPhone 11
 
-### 発売日時
-- 2019年9月20日
-  
-**特徴**
+## 発売日時
+
+- 2019 年 9 月 20 日
+
+## 特徴
+
 ### 長所
+
 - 画面が比較的大きい
 - トリプルカメラ搭載
+
 ### 短所
+
 - 重く、少し持ちづらい
 - 指紋認証がなくなった

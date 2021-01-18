@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'softbank']
 # CPU
 cpu: 'A13Bionicチップ'
 # RAM
@@ -48,14 +48,17 @@ valuation: 5
 
 # iPhone SE
 
-### 発売日時
-- 2020年4月24日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 4 月 24 日
+
+## 特徴
+
 ### 長所
+
 - 小型でコンパクト
 - 非常に安価で高性能
-### 短所
-- イヤホンジャックがない
-  
 
+### 短所
+
+- イヤホンジャックがない

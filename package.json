@@ -8,11 +8,12 @@
     "start": "next start",
     "export": "next build && next export && node ./cli/fix-export.js",
     "gen:articles": "node ./cli/gen-articles",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:md": "markdownlint ./articles"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint --fix"
+      "pre-commit": "npm run lint --fix && npm run lint:md && echo 'lint completed'"
     }
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "husky": "^4.3.5",
     "js-beautify": "^1.13.0",
     "markdown-yaml-metadata-parser": "^2.1.1",
+    "markdownlint-cli": "^0.26.0",
     "prettier": "^2.2.1"
   }
 }

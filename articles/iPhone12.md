@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'softbank']
 # CPU
 cpu: 'A14Bionicチップ'
 # RAM
@@ -48,13 +48,18 @@ valuation: 5
 
 # iPhone 12
 
-### 発売日時
-- 2020年10月23日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 10 月 23 日
+
+## 特徴
+
 ### 長所
-- 11より小型で高性能
+
+- 11 より小型で高性能
 - カメラ性能の向上
+
 ### 短所
+
 - イヤホンジャックがない
 - 指紋認証がない

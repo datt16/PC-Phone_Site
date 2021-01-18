@@ -8,11 +8,11 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Google','andoroid','Google Pixel']
+tags: ['Google', 'andoroid', 'Google Pixel']
 # キャリア
 carrier: ['au', 'softbank']
 # CPU
-cpu: 'Snapdragon '765G'
+cpu: 'Snapdragon 765G'
 # RAM
 ram: '8GB'
 # ROM || (HDD || SSD)
@@ -33,7 +33,7 @@ weight: '151g'
 # カメラ
 camera: ['広角: 1220万画素', '超広角: 1600万画素']
 # 生体認証
-biometrics: ['指紋',]
+biometrics: ['指紋']
 # 防水・防塵
 ipCode: 'IP5X'
 # 価格
@@ -48,13 +48,17 @@ valuation: 5
 
 # Google Pixel 5
 
-### 発売日時
-- 2020年10月15日
-  
-**特徴**
+## 発売日時
+
+- 2020 年 10 月 15 日
+
+## 特徴
+
 ### 長所
-- Googleサービスとの連携に強い
+
+- Google サービスとの連携に強い
 - 大きさがコンパクト
+
 ### 短所
-- 4と比べcpuなどのスペックが少し低め
-  
+
+- 4 と比べ cpu などのスペックが少し低め

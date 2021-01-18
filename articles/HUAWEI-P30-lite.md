@@ -8,9 +8,9 @@ image: '/img.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['HUAWEI','Android','HUAWEI']
+tags: ['HUAWEI', 'Android', 'HUAWEI']
 # キャリア
-carrier: ['au', 'Line','Y!mobile']
+carrier: ['au', 'Line', 'Y!mobile']
 # CPU
 cpu: 'Kirin 710'
 # RAM
@@ -48,14 +48,17 @@ valuation: 5
 
 # Galaxy S20
 
-### 発売日時
-- 2019年8月8日
-  
-**特徴**
+## 発売日時
+
+- 2019 年 8 月 8 日
+
+## 特徴
+
 ### 長所
+
 - 非常に安価
 - 被写界深度レンズという特殊なレンズがある
-### 短所
-- 発売が2019年のため古い機種
-  
 
+### 短所
+
+- 発売が 2019 年のため古い機種
