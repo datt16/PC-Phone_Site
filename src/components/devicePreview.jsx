@@ -6,6 +6,7 @@ const settings = {
   height: 143.6,
   depth: 7.7,
   inch: 6.8,
+  weight: 111
 }
 
 const staticStyles = {
@@ -16,7 +17,7 @@ const staticStyles = {
   window_size: {
     width: '0',
     height: '0',
-    transform: 'scale(0.9)',
+    transform: 'scale(0.96, 0.95)',
   },
   side_view_size: {
     width: '0',
@@ -44,6 +45,7 @@ class DevicePreview extends Component {
       settings.height = props.height
       settings.depth = props.depth
       settings.inch = props.inch
+      settings.weight = props.weight
     }
   }
 
@@ -65,6 +67,8 @@ class DevicePreview extends Component {
       <div className={styles.wrapper}>
         <div style={staticStyles.side_view_size} className={styles.side}>
           <p className={`${styles.text} ${styles.text_depth}`}>
+            <span className={styles.caption}>厚さ</span>
+            <br />
             {settings.depth + 'mm'}
           </p>
         </div>
@@ -74,10 +78,19 @@ class DevicePreview extends Component {
           className={styles.device_body}
         >
           <p className={`${styles.text} ${styles.text_width}`}>
+            <span className={styles.caption}>横幅</span>
+            <br />
             {settings.width + 'mm'}
           </p>
           <p className={`${styles.text} ${styles.text_height}`}>
+            <span className={styles.caption}>高さ</span>
+            <br />
             {settings.height + 'mm'}
+            <p className={`${styles.text} ${styles.text_weight}`}>
+              <span className={styles.caption}>重さ</span>
+              <br />
+              {settings.weight + 'g'}
+            </p>
           </p>
           <div
             className={styles.device_window}

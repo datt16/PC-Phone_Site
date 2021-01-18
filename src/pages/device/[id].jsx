@@ -28,8 +28,8 @@ export default function Home() {
               <img className={styles.img} src={article.image} />
             </div>
 
-            <div className={styles.imgbox}>
-              <DevicePreview width={70.0} height={160.8} depth={6} inch={6.8} />
+            <div className={`${styles.imgbox} ${styles.preview}`}>
+              <DevicePreview width={70.0} height={160.8} depth={6} inch={6.8} weight={111}/>
             </div>
 
             <ReactMarkdown>{article.content}</ReactMarkdown>
