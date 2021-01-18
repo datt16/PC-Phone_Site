@@ -6,7 +6,7 @@ const settings = {
   height: 143.6,
   depth: 7.7,
   inch: 6.8,
-  weight: 111
+  weight: 111,
 }
 
 const staticStyles = {
@@ -82,16 +82,20 @@ class DevicePreview extends Component {
             <br />
             {settings.width + 'mm'}
           </p>
+
           <p className={`${styles.text} ${styles.text_height}`}>
-            <span className={styles.caption}>高さ</span>
-            <br />
-            {settings.height + 'mm'}
-            <p className={`${styles.text} ${styles.text_weight}`}>
+            <span>
+              <span className={styles.caption}>高さ</span>
+              <br />
+              {settings.height + 'mm'}
+            </span>
+            <span className={`${styles.text} ${styles.text_weight}`}>
               <span className={styles.caption}>重さ</span>
               <br />
               {settings.weight + 'g'}
-            </p>
+            </span>
           </p>
+
           <div
             className={styles.device_window}
             style={staticStyles.window_size}
