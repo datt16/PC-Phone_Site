@@ -9,11 +9,11 @@
     "export": "next build && next export && node ./cli/fix-export.js",
     "gen:articles": "node ./cli/gen-articles",
     "lint": "eslint .",
-    "lint:md" : "markdownlint ./articles"
+    "lint:md": "markdownlint ./articles"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint --fix"
+      "pre-commit": "npm run lint --fix && npm run lint:md"
     }
   },
   "dependencies": {
