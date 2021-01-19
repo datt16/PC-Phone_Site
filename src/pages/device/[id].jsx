@@ -5,6 +5,8 @@ import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 
+import DeviceSpec from '../../components/deviceSpec'
+
 export default function Home() {
   const router = useRouter()
   const { id } = router.query
@@ -25,6 +27,19 @@ export default function Home() {
             <div className={styles.imgbox}>
               <img className={styles.img} src={article.image} />
             </div>
+
+            <DeviceSpec
+              cpu={article.cpu}
+              ram={article.ram}
+              storage={article.storage}
+              battery={article.battery}
+              camera={article.camera}
+              biometrics={article.biometrics}
+              ipCode={article.ipCode}
+              earphone={article.hasEarphone}
+              charge={article.charge}
+            />
+
             <ReactMarkdown>
               {article.content}
             </ReactMarkdown>

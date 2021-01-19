@@ -36,7 +36,7 @@ const data = [
   {
     id: 'Galaxy_s20',
     name: 'Galaxy S20',
-    image: '/img.jpg',
+    image: '/Galaxy-S20.jpg',
     type: 'mobile',
     cpu: 'Snapdragon 865',
     ram: '12GB',
@@ -103,8 +103,8 @@ const data = [
   },
   {
     id: 'ROG-Phone-3',
-    name: 'Rog Phone 3',
-    image: '/img.jpg',
+    name: 'ROG Phone 3',
+    image: 'https://images.unsplash.com/photo-1590653956132-7124afce5a9d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2167&q=80',
     type: 'mobile',
     cpu: 'Snapdragon 865　Plus',
     ram: '12GB',
