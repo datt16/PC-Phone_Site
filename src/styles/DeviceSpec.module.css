@@ -1,8 +1,8 @@
 .wrapper {
-   display: flex;
-   margin: auto 0;
-   flex-wrap: wrap;
-   justify-content: center;
+  display: flex;
+  margin: auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .group {
@@ -10,16 +10,16 @@
 }
 
 .group:nth-child(odd) {
-   padding: 0 .5rem 0 0;
+  padding: 0 .5rem 0 0;
 }
 
 .group:nth-child(even) {
-   padding: 0 0 0 .5rem;
+  padding: 0 0 0 .5rem;
 }
 
 .box {
   border: 2px solid black;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
   height: 5rem;
   margin: .5rem 0;
@@ -37,10 +37,10 @@
 }
 
 .vertical .iconContainer {
-   width: 100%;
-   border: none;
-   height: 30%;
-   border-bottom: 2px solid black;
+  width: 100%;
+  border: none;
+  height: 30%;
+  border-bottom: 2px solid black;
 }
 
 .iconContainer {
