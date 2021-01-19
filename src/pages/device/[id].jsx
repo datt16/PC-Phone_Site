@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Device.module.css'
 import articles from '../../lib/articles'
@@ -11,39 +11,6 @@ export default function Home() {
   const router = useRouter()
   const { id } = router.query
   const article = articles.find((a) => a.id == id)
-  const ref = useRef()
-  const isRunning = useRef(false)
-
-  const [, setIsDisplay] = useState(false)
-
-  const isScrollToggle = useCallback(() => {
-    if (isRunning.current) return
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-
-    isRunning.current = true
-
-    if (!ref) return
-    const previewPos = ref.current.device.current.offsetHeight
-
-
-    requestAnimationFrame(() => {
-      if (scrollTop > previewPos - 300) {
-        // プレビューの表示
-        setIsDisplay(true)
-      } else {
-        // 何もしない
-        setIsDisplay(false)
-      }
-      isRunning.current = false
-    })
-  })
-
-  useEffect(() => {
-    document.addEventListener('scroll', isScrollToggle, { passive: true })
-    return () => {
-      document.removeEventListener('scroll', isScrollToggle, { passive: true })
-    }
-  }, [])
 
   return (
     <div className={styles.container}>
@@ -64,7 +31,6 @@ export default function Home() {
 
             <div className={`${styles.imgbox} ${styles.preview}`}>
               <DevicePreview
-                ref={ref}
                 width={70.0}
                 height={160.8}
                 depth={6}
