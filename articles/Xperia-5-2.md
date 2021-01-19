@@ -25,7 +25,7 @@ screen: '6.1インチ'
 ## 高さ
 height: '158mm'
 ## 幅
-width: 68mm'
+width: '68mm'
 ## 厚さ
 thickness: '9.1mm'
 # 重さ

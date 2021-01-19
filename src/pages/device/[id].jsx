@@ -43,11 +43,11 @@ export default function Home() {
             />
             <div className={`${styles.imgbox} ${styles.preview}`}>
               <DevicePreview
-                width={70.0}
-                height={160.8}
-                depth={6}
-                inch={6.8}
-                weight={111}
+                width={article.width}
+                height={article.height}
+                depth={article.thickness}
+                inch={article.screen}
+                weight={article.weight}
                 zoom={3.0}
               />
             </div>

@@ -17,6 +17,11 @@ for (let p of paths) {
     fileText += '  {\n' +
       `    id: '${fileName}',\n` +
       `    name: '${result.metadata.name ? result.metadata.name : ''}',\n` +
+      `    height: ${result.metadata.height ? result.metadata.height.replace('mm', '') : 0},\n` +
+      `    width: ${result.metadata.width ? result.metadata.width.replace('mm', '') : 0},\n` +
+      `    thickness: ${result.metadata.thickness ? result.metadata.thickness.replace('mm', '') : 0},\n` +
+      `    weight: ${result.metadata.weight ? result.metadata.weight.replace('g', '') : 0},\n` +
+      `    screen: ${result.metadata.screen ? result.metadata.screen.replace('インチ', '') : 0},\n` +
       `    image: '${result.metadata.image ? result.metadata.image : ''}',\n` +
       `    type: '${result.metadata.type ? result.metadata.type : ''}',\n` +
       `    cpu: '${result.metadata.cpu ? result.metadata.cpu : ''}',\n` +
