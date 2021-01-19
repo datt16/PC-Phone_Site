@@ -11,12 +11,23 @@ for (let p of paths) {
   if (fileName.startsWith('_')) console.log(`${fileName} をスキップしました`)
   if (fs.statSync(p).isFile() && !fileName.startsWith('_')) {
     const result = metadataParser(fs.readFileSync(p).toString('utf-8'))
-    const tags = String(result.metadata.tags).split(',').map((t) => `'${t}'`).join(', ')
+    const tags = String(result.metadata.tags).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
+    const camera = String(result.metadata.camera).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
+    const biometrics = String(result.metadata.biometrics).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     fileText += '  {\n' +
       `    id: '${fileName}',\n` +
-      `    name: '${result.metadata.name}',\n` +
-      `    image: '${result.metadata.image}',\n` +
-      `    type: '${result.metadata.type}',\n` +
+      `    name: '${result.metadata.name ? result.metadata.name : ''}',\n` +
+      `    image: '${result.metadata.image ? result.metadata.image : ''}',\n` +
+      `    type: '${result.metadata.type ? result.metadata.type : ''}',\n` +
+      `    cpu: '${result.metadata.cpu ? result.metadata.cpu : ''}',\n` +
+      `    ram: '${result.metadata.ram ? result.metadata.ram : ''}',\n` +
+      `    storage: '${result.metadata.storage ? result.metadata.storage : ''}',\n` +
+      `    battery: '${result.metadata.battery ? result.metadata.battery : ''}',\n` +
+      `    camera: [${camera}],\n` +
+      `    biometrics: [${biometrics}],\n` +
+      `    ipCode: '${result.metadata.ipCode ? result.metadata.ipCode : ''}',\n` +
+      `    hasEarphone: ${result.metadata.hasEarphone ? true : false},\n` +
+      `    charge: '${result.metadata.charge ? result.metadata.charge : ''}',\n` +
       `    tags: [${tags}],\n` +
       `    content: '${(result.content.startsWith('\n') ? result.content.replace(/^\n/, '') : result.content).replace(/\n/g, '\\n')}',\n` +
     '  },\n'

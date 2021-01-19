@@ -5,6 +5,7 @@ import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 
+import DeviceSpec from '../../components/deviceSpec'
 import DevicePreview from '../../components/devicePreview'
 
 export default function Home() {
@@ -29,6 +30,17 @@ export default function Home() {
               <img className={styles.img} src={article.image} />
             </div>
 
+            <DeviceSpec
+              cpu={article.cpu}
+              ram={article.ram}
+              storage={article.storage}
+              battery={article.battery}
+              camera={article.camera}
+              biometrics={article.biometrics}
+              ipCode={article.ipCode}
+              earphone={article.hasEarphone}
+              charge={article.charge}
+            />
             <div className={`${styles.imgbox} ${styles.preview}`}>
               <DevicePreview
                 width={70.0}
@@ -39,7 +51,6 @@ export default function Home() {
                 zoom={3.0}
               />
             </div>
-
             <ReactMarkdown>{article.content}</ReactMarkdown>
           </>
         ) : (
