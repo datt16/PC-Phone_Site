@@ -1,44 +1,66 @@
 import React, { Component } from 'react'
 import styles from '../styles/DevicePreview.module.css'
 
-const settings = {
+let settings = {
   width: 70.9,
   height: 143.6,
   depth: 7.7,
   inch: 6.8,
   weight: 111,
-  zoom: 3.2
-}
-
-const staticStyles = {
-  rootSize: {
-    height: '0',
-  },
-  size: {
-    width: '0',
-    height: '0',
-  },
-  window_size: {
-    width: '0',
-    height: '0',
-    transform: 'scale(0.96, 0.95)',
-  },
-  side_view_size: {
-    width: '0',
-    height: '0',
-  },
-  window_border: {
-    borderWidth: '',
-  },
+  zoom: 3.2,
 }
 
 class DevicePreview extends Component {
   constructor(props) {
     super(props)
-    this.device = React.createRef()
-    this.wrapper = React.createRef()
     this.initialize(props)
-    this.setSize()
+    this.state = {
+      rootSize: {
+        height: '0',
+      },
+      size: {
+        width: '0',
+        height: '0',
+      },
+      window_size: {
+        width: '0',
+        height: '0',
+        transform: '',
+      },
+      side_view_size: {
+        width: '0',
+        height: '0',
+      },
+      window_border: {
+        borderWidth: '',
+      },
+    }
+  }
+
+  componentDidMount() {
+    let ZOOM = settings.zoom
+    let v_width = settings.width * ZOOM,
+      v_height = settings.height * ZOOM,
+      v_depth = settings.depth * ZOOM
+    this.setState({
+      rootSize: { height: String(v_height + 60) + 'pt' },
+      size: {
+        width: String(v_width) + 'pt',
+        height: String(v_height) + 'pt',
+      },
+      window_size: {
+        width: String(v_width) + 'pt',
+        height: String(v_height) + 'pt',
+        transform: 'scale(0.95, 0.97)',
+      },
+      side_view_size: {
+        height: String(v_height) + 'pt',
+        width: String(v_depth) + 'pt',
+      },
+      window_border: {
+        borderWidth: `${v_height}pt ${v_width}pt 0 0`,
+      },
+    })
   }
 
   initialize(props) {
@@ -55,37 +77,18 @@ class DevicePreview extends Component {
     }
   }
 
-  setSize() {
-    const ZOOM = settings.zoom
-    let v_width = settings.width * ZOOM,
-      v_height = settings.height * ZOOM,
-      v_depth = settings.depth * ZOOM
-    staticStyles.rootSize.height = String(v_height + 60) + 'pt'
-    staticStyles.size.width = String(v_width) + 'pt'
-    staticStyles.size.height = String(v_height) + 'pt'
-    staticStyles.window_size.width = String(v_width) + 'pt'
-    staticStyles.window_size.height = String(v_height) + 'pt'
-    staticStyles.side_view_size.height = String(v_height) + 'pt'
-    staticStyles.side_view_size.width = String(v_depth) + 'pt'
-    staticStyles.window_border.borderWidth = `${v_height}pt ${v_width}pt 0 0`
-  }
-
   render() {
     return (
-      <div className={styles.root} style={staticStyles.rootSize}>
-        <div className={styles.wrapper} ref={this.wrapper}>
-          <div style={staticStyles.side_view_size} className={styles.side}>
+      <div className={styles.root} style={this.state.rootSize}>
+        <div className={styles.wrapper}>
+          <div style={this.state.side_view_size} className={styles.side}>
             <p className={`${styles.text} ${styles.text_depth}`}>
               <span className={styles.caption}>厚さ</span>
               <br />
               {settings.depth + 'mm'}
             </p>
           </div>
-          <div
-            ref={this.device}
-            style={staticStyles.size}
-            className={styles.device_body}
-          >
+          <div style={this.state.size} className={styles.device_body}>
             <p className={`${styles.text} ${styles.text_width}`}>
               <span className={styles.caption}>横幅</span>
               <br />
@@ -107,7 +110,7 @@ class DevicePreview extends Component {
 
             <div
               className={styles.device_window}
-              style={staticStyles.window_size}
+              style={this.state.window_size}
             >
               <span className={styles.window_text}>
                 {settings.inch}
@@ -115,7 +118,7 @@ class DevicePreview extends Component {
               </span>
               <div
                 className={styles.device_window_inner}
-                style={staticStyles.window_border}
+                style={this.state.window_border}
               ></div>
             </div>
           </div>
