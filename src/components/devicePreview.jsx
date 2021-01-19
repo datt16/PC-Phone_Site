@@ -7,6 +7,7 @@ const settings = {
   depth: 7.7,
   inch: 6.8,
   weight: 111,
+  zoom: 3.2
 }
 
 const staticStyles = {
@@ -50,13 +51,15 @@ class DevicePreview extends Component {
       settings.depth = props.depth
       settings.inch = props.inch
       settings.weight = props.weight
+      settings.zoom = props.zoom
     }
   }
 
   setSize() {
-    let v_width = (settings.width * 100) / 30,
-      v_height = (settings.height * 100) / 30,
-      v_depth = (settings.depth * 100) / 30
+    const ZOOM = settings.zoom
+    let v_width = settings.width * ZOOM,
+      v_height = settings.height * ZOOM,
+      v_depth = settings.depth * ZOOM
     staticStyles.rootSize.height = String(v_height + 60) + 'pt'
     staticStyles.size.width = String(v_width) + 'pt'
     staticStyles.size.height = String(v_height) + 'pt'

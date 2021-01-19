@@ -25,6 +25,7 @@ export default function Home() {
     if (!ref) return
     const previewPos = ref.current.device.current.offsetHeight
 
+
     requestAnimationFrame(() => {
       if (scrollTop > previewPos - 300) {
         // プレビューの表示
@@ -69,6 +70,7 @@ export default function Home() {
                 depth={6}
                 inch={6.8}
                 weight={111}
+                zoom={3.0}
               />
             </div>
 
