@@ -4,7 +4,7 @@ id: 'Xperia5-2'
 # 一覧表示の時に表示される名前になります
 name: 'Xperia5 Ⅱ'
 # 画像を指定します
-image: 'https://livedoor.blogimg.jp/smaxjp/imgs/f/5/f51df8c5-s.jpg'
+image: '/Xperia-5-2.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

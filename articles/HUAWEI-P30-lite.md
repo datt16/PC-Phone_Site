@@ -4,7 +4,7 @@ id: 'HUAWEI-P30-lite'
 # 一覧表示の時に表示される名前になります
 name: 'HUAWEI P30 lite'
 # 画像を指定します
-image: 'https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p30-lite/img/Huawei-Nova-4e_bg.jpg'
+image: '/HUAWEI-P30-lite.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

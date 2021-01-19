@@ -4,7 +4,7 @@ id: 'iPhone-SE'
 # 一覧表示の時に表示される名前になります
 name: 'iPhone SE'
 # 画像を指定します
-image: 'https://images.unsplash.com/photo-1514473776127-61e2dc1dded3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80'
+image: '/iPhone-SE.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

@@ -4,7 +4,7 @@ id: 'ROG-Phone-3'
 # 一覧表示の時に表示される名前になります
 name: 'ROG Phone 3'
 # 画像を指定します
-image: 'https://images.unsplash.com/photo-1590653956132-7124afce5a9d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2167&q=80'
+image: '/ROG-Phone.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

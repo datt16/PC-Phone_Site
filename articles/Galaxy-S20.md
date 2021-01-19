@@ -4,7 +4,7 @@ id: 'Galaxy-S20'
 # 一覧表示の時に表示される名前になります
 name: 'Galaxy S20'
 # 画像を指定します
-image: 'https://images.unsplash.com/photo-1583573607873-a55656e0cf76?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3293&q=80'
+image: '/Galaxy-S20.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

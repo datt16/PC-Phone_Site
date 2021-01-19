@@ -4,7 +4,7 @@ id: 'AQUOS-zero5G-basic'
 # 一覧表示の時に表示される名前になります
 name: 'AQUOS zero5G basic'
 # 画像を指定します
-image: 'https://sumaho-susume.com/wp-content/uploads/2020/11/tdm003-001.jpg'
+image: '/AQUOS-zero5G-basic.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
