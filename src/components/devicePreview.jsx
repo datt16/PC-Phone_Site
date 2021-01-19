@@ -25,7 +25,7 @@ class DevicePreview extends Component {
       window_size: {
         width: '0',
         height: '0',
-        transform: 'scale(0.96, 0.95)',
+        transform: '',
       },
       side_view_size: {
         width: '0',
@@ -51,7 +51,7 @@ class DevicePreview extends Component {
       window_size: {
         width: String(v_width) + 'pt',
         height: String(v_height) + 'pt',
-        transform: 'scale(0.96, 0.95)',
+        transform: 'scale(0.95, 0.97)',
       },
       side_view_size: {
         height: String(v_height) + 'pt',
