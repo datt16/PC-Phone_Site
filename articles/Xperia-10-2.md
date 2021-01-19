@@ -1,10 +1,10 @@
 ---
 # 記事の ID になります
-id: 'Xperia 10 Ⅱ'
+id: 'Xperia-10-2'
 # 一覧表示の時に表示される名前になります
 name: 'Xperia 10 Ⅱ'
 # 画像を指定します
-image: '/img.jpg'
+image: '/Xperia-10-2.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

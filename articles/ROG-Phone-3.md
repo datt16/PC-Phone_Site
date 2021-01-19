@@ -1,6 +1,6 @@
 ---
 # 記事の ID になります
-id: 'ROG Phone 3'
+id: 'ROG-Phone-3'
 # 一覧表示の時に表示される名前になります
 name: 'ROG Phone 3'
 # 画像を指定します

@@ -6,7 +6,7 @@ import DeviceSpecCard from './deviceSpecCard'
 const DeviceSpec = function DeviceSpec({ cpu, ram, storage, battery, camera, biometrics, ipCode, earphone, charge }) {
   const bio = []
   biometrics.forEach(b => {
-    bio.push(<DeviceSpecCard name='biometrics' type='vertical' value={b} />)
+    bio.push(<DeviceSpecCard key={b} name='biometrics' type='vertical' value={b} />)
   })
   return (
     <div className={styles.wrapper}>

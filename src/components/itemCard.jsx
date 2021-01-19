@@ -17,8 +17,8 @@ const itemCard = (props) => {
           <span className={styles.tags}>
             <AiOutlineTags size={21} />
             { props.data.tags
-              ? props.data.tags.map((t) => {
-                return <span key={t} className={styles.tag}>#{ t }</span>
+              ? props.data.tags.map((t, idx) => {
+                return <span key={idx} className={styles.tag}>#{ t }</span>
               })
               : '' }
           </span>
