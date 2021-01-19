@@ -1,11 +1,12 @@
 import React from 'react'
-import { FiCpu, FiMinus, FiCamera } from 'react-icons/fi'
+import { FiCpu, FiMinus, FiCamera, FiCircle, FiX } from 'react-icons/fi'
 import { FaMemory, FaBatteryThreeQuarters } from 'react-icons/fa'
+import { BiFace, BiFingerprint } from 'react-icons/bi'
 import { MdSdStorage } from 'react-icons/md'
-import styles from '../styles/DeviceSpec.module.css'
+import styles from '../styles/DeviceSpec.module.scss'
 
 const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
-  let icon = <FiMinus />
+  let icon = <FiMinus size={30} />
   let iconText = 'Unknown'
   switch (name) {
     case 'cpu':
@@ -28,6 +29,28 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
       icon = <FiCamera size={30} />
       iconText = 'カメラ'
       break
+    case 'biometrics':
+      iconText = value
+      switch (value) {
+        case '顔':
+          value = <BiFace size={50} />
+          break
+        case '指紋':
+          value = <BiFingerprint size={50} />
+          break
+        default:
+          break
+      }
+    case 'ipCode':
+      iconText = '防水防塵'
+      break
+    case 'earphone':
+      iconText = 'イヤホン\nジャック'
+      value = value ? <FiCircle size={50} /> : <FiX size={50} />
+      break
+    case 'charge':
+      iconText = '接続端子'
+      break
     default:
       break
   }
@@ -37,8 +60,8 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
       <div className={styles.iconContainer}>
         <div className={styles.icon}>
           {icon}
-          <p>{iconText}</p>
         </div>
+        <p>{iconText}</p>
       </div>
       <div className={styles.detail}>
         <p>{Array.isArray(value) ? value.join('\n') : value}</p>

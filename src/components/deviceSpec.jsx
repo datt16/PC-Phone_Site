@@ -1,9 +1,13 @@
 import React from 'react'
-import styles from '../styles/DeviceSpec.module.css'
+import styles from '../styles/DeviceSpec.module.scss'
 
 import DeviceSpecCard from './deviceSpecCard'
 
 const DeviceSpec = function DeviceSpec({ cpu, ram, storage, battery, camera, biometrics, ipCode, earphone, charge }) {
+  const bio = []
+  biometrics.forEach(b => {
+    bio.push(<DeviceSpecCard name='biometrics' type='vertical' value={b} />)
+  })
   return (
     <div className={styles.wrapper}>
       <div className={styles.group}>
@@ -14,7 +18,7 @@ const DeviceSpec = function DeviceSpec({ cpu, ram, storage, battery, camera, bio
         <DeviceSpecCard name='camera' type='side' value={camera} />
       </div>
       <div className={styles.group}>
-        <DeviceSpecCard name='biometrics' type='vertical' value={biometrics} />
+        {bio}
         <DeviceSpecCard name='ipCode' type='vertical' value={ipCode} />
         <DeviceSpecCard name='earphone' type='vertical' value={earphone} />
         <DeviceSpecCard name='charge' type='vertical' value={charge} />

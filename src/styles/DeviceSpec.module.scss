@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+}
+
+.group {
+  flex-basis: 50%;
+}
+
+.group:nth-child(odd) {
+  padding: 0 .5rem 0 0;
+}
+
+.group:nth-child(even) {
+  padding: 0 0 0 .5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 2px solid black;
+  height: 5rem;
+  margin: 0 0 .5rem 0;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.box:last-child {
+  margin: 0;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.side {
+  display: flex;
+
+  .iconContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 2px solid black;
+    justify-content: center;
+  }
+
+  .iconContainer p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .detail {
+    width: 70%;
+  }
+}
+
+.vertical {
+  height: 13.25rem;
+  flex-basis: 32%;
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  &:nth-child(3n+2) {
+    margin: 0 .5rem;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .iconContainer {
+    display: flex;
+    height: 3.2rem;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail {
+    height: 70%;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
