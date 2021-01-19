@@ -35,6 +35,7 @@ class DevicePreview extends Component {
   constructor(props) {
     super(props)
     this.device = React.createRef()
+    this.wrapper = React.createRef()
     this.initialize(props)
     this.setSize()
   }
@@ -50,10 +51,6 @@ class DevicePreview extends Component {
       settings.inch = props.inch
       settings.weight = props.weight
     }
-  }
-
-  show() {
-    console.warn('Hellollllllllllll')
   }
 
   setSize() {
@@ -73,7 +70,7 @@ class DevicePreview extends Component {
   render() {
     return (
       <div className={styles.root} style={staticStyles.rootSize}>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} ref={this.wrapper}>
           <div style={staticStyles.side_view_size} className={styles.side}>
             <p className={`${styles.text} ${styles.text_depth}`}>
               <span className={styles.caption}>厚さ</span>

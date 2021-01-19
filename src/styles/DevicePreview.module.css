@@ -10,7 +10,7 @@
     padding: 14px;
 }
 
-.wrapper::before {
+/* .wrapper::before {
     top: 0px;
     left: 0px;
     height: 100%;
@@ -41,7 +41,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+} */
 
 @keyframes show {
     0% {
