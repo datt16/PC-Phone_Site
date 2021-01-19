@@ -53,10 +53,8 @@
     }
 }
 
-
-
 .text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin: 0;
     padding: 0;
     text-align: start;
@@ -64,17 +62,17 @@
 }
 
 .caption {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     display: contents;
-    color: #707070;
+    color: #404040;
 }
 
 .text_depth {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: -45px;
+    top: -50px;
     left: 0px;
     right: 0px;
 }
@@ -83,7 +81,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: -45px;
+    top: -50px;
     left: 0px;
     right: 0px;
 }
@@ -93,7 +91,7 @@
     height: inherit;
     position: absolute;
     align-items: center;
-    right: -70px;
+    right: -80px;
 }
 
 .text_weight {
@@ -139,6 +137,7 @@
     
     text-align: center;
 }
+
 .window_text p {
     padding: 0;
     margin: 25px 0 0 2px;
