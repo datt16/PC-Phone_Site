@@ -1,10 +1,10 @@
 ---
 # 記事の ID になります
-id: 'iPhone SE'
+id: 'iPhone-SE'
 # 一覧表示の時に表示される名前になります
 name: 'iPhone SE'
 # 画像を指定します
-image: '/img.jpg'
+image: '/iPhone-SE.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです

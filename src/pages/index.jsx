@@ -17,8 +17,8 @@ export default function Home() {
           <label>すべての記事</label>
         </div>
         <div className={styles.grid}>
-          {articles.map((a) => {
-            return <ItemCard key={a.name} data={a} />
+          {articles.map((a, idx) => {
+            return <ItemCard key={idx} data={a} />
           })}
         </div>
       </main>

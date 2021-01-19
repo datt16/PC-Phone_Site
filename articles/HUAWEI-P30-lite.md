@@ -1,14 +1,14 @@
 ---
 # 記事の ID になります
-id: 'HUAWEI P30 lite'
+id: 'HUAWEI-P30-lite'
 # 一覧表示の時に表示される名前になります
 name: 'HUAWEI P30 lite'
 # 画像を指定します
-image: '/img.jpg'
+image: '/HUAWEI-P30-lite.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['HUAWEI', 'Android', 'HUAWEI']
+tags: ['HUAWEI', 'Android']
 # キャリア
 carrier: ['au', 'Line', 'Y!mobile']
 # CPU
