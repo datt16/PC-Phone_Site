@@ -35,7 +35,7 @@ const replaceText = (filePath) => {
   if (isHTML) {
     text = text.replace(new RegExp('src="/', 'g'), `src="${relative}`)
       .replace(new RegExp('href="(.+?)"', 'g'), (match, p1) => {
-        return (!(p1.endsWith('.css') || p1.endsWith('.js') || p1.endsWith('.ico') || p1 === '/' || p1 === '#')) ? match : match.replace(p1, `${p1}.html`)
+        return ((p1.endsWith('.css') || p1.endsWith('.js') || p1.endsWith('.ico') || p1 === '/' || p1 === '#')) ? match : match.replace(p1, `${p1}.html`)
       })
       .replace(new RegExp('href="/', 'g'), `href="${relative}`)
       .replace('&quot;', '\'')
@@ -43,7 +43,6 @@ const replaceText = (filePath) => {
   } else if (isJS) {
     result = beautify.js(text, beautifyOptions)
   }
-
 
   fs.writeFileSync(filePath, result, (err) => {
     if (err) console.log(err)
