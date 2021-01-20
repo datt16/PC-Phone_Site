@@ -7,7 +7,7 @@ let settings = {
   depth: 7.7,
   inch: 6.8,
   weight: 111,
-  zoom: 3.2,
+  zoom: 1,
 }
 
 class DevicePreview extends Component {
@@ -38,7 +38,9 @@ class DevicePreview extends Component {
   }
 
   componentDidMount() {
-    let ZOOM = settings.zoom
+    let window_width = window.outerWidth
+    let ZOOM = 0
+    ZOOM = window_width < 480 ? window_width / 180 : 3.33
     let v_width = settings.width * ZOOM,
       v_height = settings.height * ZOOM,
       v_depth = settings.depth * ZOOM
@@ -51,7 +53,7 @@ class DevicePreview extends Component {
       window_size: {
         width: String(v_width) + 'pt',
         height: String(v_height) + 'pt',
-        transform: 'scale(0.95, 0.97)',
+        transform: 'scale(.95, .97)',
       },
       side_view_size: {
         height: String(v_height) + 'pt',
@@ -73,7 +75,6 @@ class DevicePreview extends Component {
       settings.depth = props.depth
       settings.inch = props.inch
       settings.weight = props.weight
-      settings.zoom = props.zoom
     }
   }
 

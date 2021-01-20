@@ -49,4 +49,8 @@
   .article h1 {
     margin: 0;
   }
+
+  .preview {
+    padding: 1rem 0 0 0;
+  }
 }

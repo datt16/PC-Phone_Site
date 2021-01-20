@@ -16,7 +16,11 @@ export default function Home() {
 
   const tags = []
   article.tags.forEach((t, idx) => {
-    tags.push(<span key={idx} className={styles.tag}>#{t}</span>)
+    tags.push(
+      <span key={idx} className={styles.tag}>
+        #{t}
+      </span>
+    )
   })
 
   return (
@@ -25,7 +29,7 @@ export default function Home() {
         <>
           <Head>
             <title>{article.name} | PC Phone Site</title>
-            <link rel='icon' href='/favicon.ico' />
+            <link rel="icon" href="/favicon.ico" />
           </Head>
 
           <main className={styles.main}>
@@ -48,6 +52,7 @@ export default function Home() {
                 earphone={article.hasEarphone}
                 charge={article.charge}
               />
+
               <div className={`${styles.imgbox} ${styles.preview}`}>
                 <DevicePreview
                   width={article.width}
@@ -55,7 +60,6 @@ export default function Home() {
                   depth={article.thickness}
                   inch={article.screen}
                   weight={article.weight}
-                  zoom={3.0}
                 />
               </div>
               <ReactMarkdown>{article.content}</ReactMarkdown>
@@ -63,10 +67,10 @@ export default function Home() {
           </main>
         </>
       ) : (
-          <>
-            <h1>404 Not Found.</h1>
-          </>
-        )}
+        <>
+          <h1>404 Not Found.</h1>
+        </>
+      )}
     </div>
   )
 }

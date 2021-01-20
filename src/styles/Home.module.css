@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: .5rem;
   width: 2000px;
   max-width: 100%;
   display: flex;
@@ -37,7 +37,7 @@
 
 .form button {
   display: inline-block;
-  padding: 0.3em 1em;
+  padding: .3em 1em;
   text-decoration: none;
   color: #000000;
   border: solid 1px #000000;
