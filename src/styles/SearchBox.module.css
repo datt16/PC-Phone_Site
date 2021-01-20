@@ -3,9 +3,10 @@
   background: none;
   color: #666;
   border: none;
-  font-size: 20px; /*アイコンサイズ*/
+  font-size: 20px;
   align-items: center;
 }
+
 .link:hover {
   color: #7fbfff;
 }

@@ -1,71 +1,71 @@
 .wrapper {
-    position: fixed;
-    overflow: hidden;
-    
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    
-    background: rgba(10, 10, 10, 0.685);
+  position: fixed;
+  overflow: hidden;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(10, 10, 10, 0.685);
 }
 
 .SHOW {
-    display: flex;
+  display: flex;
 }
 
 .HIDE {
-    display: none;
+  display: none;
 }
 
 .frame {
-    overflow: visible scroll;
-    background: white;
-    width: 500px;
-    height: 300px;
-    padding: 0;
-    margin: 0;
+  overflow: visible scroll;
+  background: white;
+  width: 500px;
+  height: 300px;
+  padding: 0;
+  margin: 0;
 }
 
 .frame h2 {
-    margin: 20px 15px;
+  margin: 20px 15px;
 }
 
 .frame ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .frame li{
-    list-style: none;
-    padding: 0.6rem 1rem;
+  list-style: none;
+  padding: 0.6rem 1rem;
 }
 
 .frame li:hover {
-    background: rgb(214, 214, 214);
+  background: rgb(214, 214, 214);
 }
 
 .selected {
-    color: royalblue;
+  color: royalblue;
 }
 
 .frame div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .frame div > p {
-    margin: 0 1rem;
-    color: silver;
+  margin: 0 1rem;
+  color: silver;
 }
 
 .frame div > p:hover {
-    color: black;
+  color: black;
 }

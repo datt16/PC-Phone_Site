@@ -41,6 +41,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
         default:
           break
       }
+      break
     case 'ipCode':
       iconText = '防水防塵'
       break
