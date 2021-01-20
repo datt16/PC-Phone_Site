@@ -59,7 +59,7 @@
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(auto-fill, 100%);
   }
