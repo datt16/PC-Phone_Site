@@ -15,14 +15,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Search | PC Phone Site</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      {article ? (
+        <>
+          <Head>
+            <title>{article.name} | PC Phone Site</title>
+            <link rel='icon' href='/favicon.ico' />
+          </Head>
 
-      <main className={styles.main}>
-        {article ? (
-          <>
+          <main className={styles.main}>
             <h1>{article.name}</h1>
             <p>Type: {article.type}</p>
             <p>Tags: {article.tags.join(', ')}</p>
@@ -52,13 +52,13 @@ export default function Home() {
               />
             </div>
             <ReactMarkdown>{article.content}</ReactMarkdown>
-          </>
-        ) : (
+          </main>
+        </>
+      ) : (
           <>
             <h1>404 Not Found.</h1>
           </>
         )}
-      </main>
     </div>
   )
 }
