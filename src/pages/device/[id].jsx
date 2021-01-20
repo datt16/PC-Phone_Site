@@ -4,6 +4,7 @@ import styles from '../../styles/Device.module.css'
 import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
+import { AiOutlineTags } from 'react-icons/ai'
 
 import DeviceSpec from '../../components/deviceSpec'
 import DevicePreview from '../../components/devicePreview'
@@ -12,6 +13,11 @@ export default function Home() {
   const router = useRouter()
   const { id } = router.query
   const article = articles.find((a) => a.id == id)
+
+  const tags = []
+  article.tags.forEach((t, idx) => {
+    tags.push(<span key={idx} className={styles.tag}>#{t}</span>)
+  })
 
   return (
     <div className={styles.container}>
@@ -26,7 +32,10 @@ export default function Home() {
             <img className={styles.img} src={article.image} />
             <article className={styles.article}>
               <h1>{article.name}</h1>
-              <p>Type: {article.tags.join(' | ')}</p>
+              <p className={styles.tags}>
+                <AiOutlineTags size={23} />
+                {tags}
+              </p>
 
               <DeviceSpec
                 cpu={article.cpu}
