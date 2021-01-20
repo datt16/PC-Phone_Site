@@ -1,104 +1,104 @@
 .wrapper {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
-    margin: 0;
-    padding: 0;
-    text-align: start;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  font-weight: normal;
 }
 
 .caption {
-    font-size: 0.9rem;
-    font-weight: li;
-    display: contents;
-    color: #7a7a7a;
+  font-size: 0.9rem;
+  font-weight: li;
+  display: contents;
+  color: #7a7a7a;
 }
 
 .text_depth {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -50px;
-    left: 0px;
-    right: 0px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  right: 0px;
 }
 
 .text_width {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -50px;
-    left: 0px;
-    right: 0px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  right: 0px;
 }
 
 .text_height {
-    display: flex;
-    height: inherit;
-    position: absolute;
-    align-items: center;
-    right: -80px;
+  display: flex;
+  height: inherit;
+  position: absolute;
+  align-items: center;
+  right: -80px;
 }
 
 .text_weight {
-    display: flex;
-    height: inherit;
-    position: absolute;
-    align-items: flex-end;
+  display: flex;
+  height: inherit;
+  position: absolute;
+  align-items: flex-end;
 }
 
 .device_body {
-    position: relative;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: white;
-    border: 1px solid #303030;
+  position: relative;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 1px solid #303030;
 }
 
 .device_window {
-    overflow: hidden;
-    background: white;
-    border-color: #ffffff #ebebeb transparent transparent;
+  overflow: hidden;
+  background: white;
+  border-color: #ffffff #ebebeb transparent transparent;
 }
 
 .device_window_inner {
-    border-top: 1px solid #303030;
-    border-left: 1px solid #303030;
-    border-style: solid;
+  border-top: 1px solid #303030;
+  border-left: 1px solid #303030;
+  border-style: solid;
 }
 
 .window_text {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    color: white;
-    font-weight: bold;
-    font-size: 3.8rem;
-    
-    text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3.8rem;
+
+  text-align: center;
 }
 
 .window_text p {
-    padding: 0;
-    margin: 25px 0 0 2px;
-    font-size: 1.5rem;
-    display: flex;
+  padding: 0;
+  margin: 25px 0 0 2px;
+  font-size: 1.5rem;
+  display: flex;
 }
 
-.side {   
-    position: relative;
-    margin-right: 2em;
-    border: 1px solid #303030;
+.side {
+  position: relative;
+  margin-right: 2em;
+  border: 1px solid #303030;
 }
