@@ -1,3 +1,9 @@
+.root {
+    position: relative;
+    width: 100%;
+    margin: 0 50px 0 10px;
+}
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -23,7 +29,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -50px;
+  top: -40px;
   left: 0px;
   right: 0px;
 }
@@ -32,7 +38,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -50px;
+  top: -40px;
   left: 0px;
   right: 0px;
 }
@@ -42,10 +48,11 @@
   height: inherit;
   position: absolute;
   align-items: center;
-  right: -80px;
+  right: -3.8em;
 }
 
 .text_weight {
+  width: 100%;
   display: flex;
   height: inherit;
   position: absolute;
