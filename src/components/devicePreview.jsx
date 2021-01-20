@@ -40,7 +40,6 @@ class DevicePreview extends Component {
   componentDidMount() {
     let window_width = window.outerWidth
     let ZOOM = 0
-    console.warn(window_width)
     ZOOM = window_width < 480 ? window_width / 180 : 3.33
     let v_width = settings.width * ZOOM,
       v_height = settings.height * ZOOM,
