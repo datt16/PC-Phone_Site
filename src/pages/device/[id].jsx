@@ -23,35 +23,34 @@ export default function Home() {
           </Head>
 
           <main className={styles.main}>
-            <h1>{article.name}</h1>
-            <p>Type: {article.type}</p>
-            <p>Tags: {article.tags.join(', ')}</p>
-            <div className={styles.imgbox}>
-              <img className={styles.img} src={article.image} />
-            </div>
+            <img className={styles.img} src={article.image} />
+            <article className={styles.article}>
+              <h1>{article.name}</h1>
+              <p>Type: {article.tags.join(' | ')}</p>
 
-            <DeviceSpec
-              cpu={article.cpu}
-              ram={article.ram}
-              storage={article.storage}
-              battery={article.battery}
-              camera={article.camera}
-              biometrics={article.biometrics}
-              ipCode={article.ipCode}
-              earphone={article.hasEarphone}
-              charge={article.charge}
-            />
-            <div className={`${styles.imgbox} ${styles.preview}`}>
-              <DevicePreview
-                width={article.width}
-                height={article.height}
-                depth={article.thickness}
-                inch={article.screen}
-                weight={article.weight}
-                zoom={3.0}
+              <DeviceSpec
+                cpu={article.cpu}
+                ram={article.ram}
+                storage={article.storage}
+                battery={article.battery}
+                camera={article.camera}
+                biometrics={article.biometrics}
+                ipCode={article.ipCode}
+                earphone={article.hasEarphone}
+                charge={article.charge}
               />
-            </div>
-            <ReactMarkdown>{article.content}</ReactMarkdown>
+              <div className={`${styles.imgbox} ${styles.preview}`}>
+                <DevicePreview
+                  width={article.width}
+                  height={article.height}
+                  depth={article.thickness}
+                  inch={article.screen}
+                  weight={article.weight}
+                  zoom={3.0}
+                />
+              </div>
+              <ReactMarkdown>{article.content}</ReactMarkdown>
+            </article>
           </main>
         </>
       ) : (
