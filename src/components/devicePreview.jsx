@@ -53,7 +53,7 @@ class DevicePreview extends Component {
       window_size: {
         width: String(v_width) + 'pt',
         height: String(v_height) + 'pt',
-        transform: 'scale(0.95, 0.97)',
+        transform: 'scale(.95, .97)',
       },
       side_view_size: {
         height: String(v_height) + 'pt',

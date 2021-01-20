@@ -22,7 +22,7 @@
 }
 
 .caption {
-  font-size: 0.9rem;
+  font-size: .9rem;
   font-weight: li;
   display: contents;
   color: #7a7a7a;
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0px;
   right: 0px;
 }
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0px;
   right: 0px;
 }
@@ -121,6 +121,6 @@
     font-size: 3rem;
   }
   .window_text p {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
