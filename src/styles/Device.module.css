@@ -24,7 +24,7 @@
 
 .preview {
   max-width: 100%;
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
 }
 
 .tags {
@@ -34,6 +34,33 @@
 
 .tag {
   margin: 0 .175rem;
+}
+
+.markdown h1 {
+  display: none;
+}
+
+.markdown h2 {
+  background: #282828;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.markdown h3 {
+  padding-top: 1em;
+  margin: 0;
+  margin-left: .3rem;
+  font-size: 1.4em;
+}
+
+.markdown ul {
+  padding: 0 0 0 .9rem;
+}
+
+.markdown li {
+  list-style: none;
+  font-size: 1.0em;
 }
 
 @media (max-width: 480px) {
