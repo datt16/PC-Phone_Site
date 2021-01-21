@@ -62,7 +62,7 @@ export default function Home() {
                   weight={article.weight}
                 />
               </div>
-              <ReactMarkdown>{article.content}</ReactMarkdown>
+              <ReactMarkdown className={styles.markdown}>{article.content}</ReactMarkdown>
             </article>
           </main>
         </>
