@@ -14,9 +14,9 @@ carrier: ['au', 'SoftBank']
 # CPU
 cpu: 'Snapdragon'
 # RAM
-ram: '4GB'
+ram: ['4GB']
 # ROM || (HDD || SSD)
-storage: '64GB'
+storage: ['64GB']
 # バッテリー
 battery: '4570mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
 biometrics: ['指紋', '顔']
 # 防水・防塵
-ipCode: 'IPX8'
+ipCode: ['IPX8']
 # 価格
 price: 35641
 # イヤホンジャック

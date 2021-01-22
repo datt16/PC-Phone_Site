@@ -14,9 +14,9 @@ carrier: ['SIMフリー']
 # CPU
 cpu: 'Snapdragon 865 Plus'
 # RAM
-ram: '12GB'
+ram: ['12GB', '16GB']
 # ROM || (HDD || SSD)
-storage: '512GB'
+storage: ['512GB']
 # バッテリー
 battery: '6000mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1200万画素', '望遠: 6400万画素']
 # 生体認証
 biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IP5X'
+ipCode: ['IP5X']
 # 価格
 price: 142780
 # イヤホンジャック

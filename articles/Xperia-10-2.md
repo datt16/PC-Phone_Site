@@ -14,9 +14,9 @@ carrier: ['au', 'docomo', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 665'
 # RAM
-ram: '4GB'
+ram: ['4GB']
 # ROM || (HDD || SSD)
-storage: '64GB'
+storage: ['64GB']
 # バッテリー
 battery: '3600mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
 biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IPX5/IPX8/IP6X'
+ipCode: ['IPX5', 'IPX8', 'IP6X']
 # 価格
 price: 39600
 # イヤホンジャック

@@ -16,6 +16,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'ram':
       icon = <FaMemory size={30} />
       iconText = 'RAM'
+      value = value.sort().filter(v => v != '')
       break
     case 'battery':
       icon = <FaBatteryThreeQuarters size={30} />
@@ -24,6 +25,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'storage':
       icon = <MdSdStorage size={30} />
       iconText = 'ストレージ'
+      value = value.filter(v => v != '')
       break
     case 'camera':
       icon = <FiCamera size={30} />
@@ -44,11 +46,14 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
       break
     case 'ipCode':
       iconText = '防水防塵'
-      value = value.split('/').sort()
+      value = value.sort().filter(v => v != '')
+      if (value.length == 0) {
+        value = <FiX size={60} />
+      }
       break
     case 'earphone':
       iconText = 'イヤホン\nジャック'
-      value = value ? <FiCircle size={50} /> : <FiX size={50} />
+      value = value ? <FiCircle size={50} /> : <FiX size={60} />
       break
     case 'charge':
       iconText = '接続端子'
