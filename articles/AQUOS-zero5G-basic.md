@@ -10,7 +10,7 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Sharp', 'Android', 'AQUOS']
 # キャリア
-carrier: ['au', 'softbank']
+carrier: ['au', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 765'
 # RAM

@@ -10,13 +10,13 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo', 'softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
 cpu: 'A14Bionicチップ'
 # RAM
 ram: '4GB'
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: '64GB 128GB 256GB'
 # バッテリー
 battery: '3110mAh'
 # 画面サイズ

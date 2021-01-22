@@ -10,9 +10,9 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['ASUS', 'Android', 'Rog']
 # キャリア
-carrier: ['simフリー']
+carrier: ['SIMフリー']
 # CPU
-cpu: 'Snapdragon 865　Plus'
+cpu: 'Snapdragon 865 Plus'
 # RAM
 ram: '12GB'
 # ROM || (HDD || SSD)

@@ -8,9 +8,9 @@ image: '/Google-Pixel-5.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Google', 'andoroid', 'Google Pixel']
+tags: ['Google', 'Android', 'Google Pixel']
 # キャリア
-carrier: ['au', 'softbank']
+carrier: ['au', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 765G'
 # RAM
