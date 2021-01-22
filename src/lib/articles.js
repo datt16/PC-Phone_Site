@@ -95,7 +95,7 @@ const data = [
     thickness: 7.4,
     weight: 159,
     screen: 6.1,
-    image: '/HUAWEI-P30-lite.jpg',
+    image: '/P30-Lite.jpg',
     type: 'mobile',
     cpu: 'Kirin 710',
     ram: '4GB',
