@@ -44,6 +44,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
       break
     case 'ipCode':
       iconText = '防水防塵'
+      value = value.split('/').sort()
       break
     case 'earphone':
       iconText = 'イヤホン\nジャック'
