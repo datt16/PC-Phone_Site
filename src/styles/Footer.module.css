@@ -38,19 +38,24 @@
 .footer li {
   font-size: 16pt;
   position: relative;
+  color: white;
 }
 .footer li::before {
   content: "";
-  position: absolute;
-  display: inline-block;
-  margin: auto;
-  top: 4px;
-  bottom: 0px;
-  left: -6px;
   width: 3px;
-  height: 14pt;
-  background-color: aquamarine;
-  align-content: center;
+  height: 70%;
+  position: absolute;
+  margin: 0 auto;
+  top: 6px;
+  left: -8px;
+  background-color: white;
+}
+
+.footer li:hover {
+  animation-name: hov;
+  animation-duration: .1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @media (max-width: 480px) {
@@ -59,5 +64,11 @@
   }
   .caption {
     margin: 0;
+  }
+}
+
+@keyframes hov {
+  100% {
+    opacity: 50%;
   }
 }
