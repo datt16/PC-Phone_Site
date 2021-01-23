@@ -23,8 +23,6 @@ export default function Home() {
     )
   })
 
-  console.log(article)
-
   return (
     <div className={styles.container}>
       {article ? (
