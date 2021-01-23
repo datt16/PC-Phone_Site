@@ -22,7 +22,7 @@
 }
 
 .caption {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: li;
   display: contents;
   color: #7a7a7a;
@@ -47,15 +47,13 @@
 }
 
 .text_height {
+  margin-left: 12px;
+  width: auto;
   display: flex;
-  height: inherit;
-  position: absolute;
   align-items: center;
-  right: -72px;
 }
 
 .text_weight {
-  width: 100%;
   display: flex;
   height: inherit;
   position: absolute;

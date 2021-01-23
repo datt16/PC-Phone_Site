@@ -22,6 +22,9 @@ class DevicePreview extends Component {
         width: '0',
         height: '0',
       },
+      caption_area: {
+        height: '0',
+      },
       window_size: {
         width: '0',
         height: '0',
@@ -62,6 +65,9 @@ class DevicePreview extends Component {
       window_border: {
         borderWidth: `${v_height}pt ${v_width}pt 0 0`,
       },
+      caption_area: {
+        height: String(v_height) + 'pt',
+      }
     })
   }
 
@@ -95,20 +101,6 @@ class DevicePreview extends Component {
               <br />
               {settings.width + 'mm'}
             </p>
-
-            <p className={`${styles.text} ${styles.text_height}`}>
-              <span>
-                <span className={styles.caption}>高さ</span>
-                <br />
-                {settings.height + 'mm'}
-              </span>
-              <span className={`${styles.text} ${styles.text_weight}`}>
-                <span className={styles.caption}>重さ</span>
-                <br />
-                {settings.weight + 'g'}
-              </span>
-            </p>
-
             <div
               className={styles.device_window}
               style={this.state.window_size}
@@ -123,6 +115,18 @@ class DevicePreview extends Component {
               ></div>
             </div>
           </div>
+          <p style={this.state.caption_area} className={`${styles.text} ${styles.text_height}`}>
+            <span>
+              <span className={styles.caption}>高さ</span>
+              <br />
+              {settings.height + 'mm'}
+            </span>
+            <span className={`${styles.text} ${styles.text_weight}`}>
+              <span className={styles.caption}>重さ</span>
+              <br />
+              {settings.weight + 'g'}
+            </span>
+          </p>
         </div>
       </div>
     )
