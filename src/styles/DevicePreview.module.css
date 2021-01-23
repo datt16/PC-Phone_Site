@@ -1,13 +1,11 @@
 .root {
-  position: relative;
   right: 2.4em;
-  display: flex;
-  justify-content: center;
   width: 100%;
   margin: 0 50px 0 10px;
 }
 
 .wrapper {
+  width: auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -47,15 +45,13 @@
 }
 
 .text_height {
+  margin-left: 12px;
+  width: auto;
   display: flex;
-  height: inherit;
-  position: absolute;
   align-items: center;
-  right: -72px;
 }
 
 .text_weight {
-  width: 100%;
   display: flex;
   height: inherit;
   position: absolute;
@@ -122,5 +118,8 @@
   }
   .window_text p {
     font-size: 1rem;
+  }
+  .wrapper {
+    
   }
 }
