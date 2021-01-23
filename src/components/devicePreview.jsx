@@ -87,7 +87,6 @@ class DevicePreview extends Component {
     if (!isMobile) {
       ZOOM /= window_width < 1024 ? 3.6 : 1.55
     }
-    console.warn(ZOOM)
     return ZOOM
   }
 
