@@ -7,7 +7,7 @@ let settings = {
   depth: 7.7,
   inch: 6.8,
   weight: 111,
-  zoom: 1,
+  isMobile: true,
 }
 
 class DevicePreview extends Component {
@@ -41,12 +41,11 @@ class DevicePreview extends Component {
   }
 
   componentDidMount() {
-    let window_width = window.outerWidth
-    let ZOOM = 0
-    ZOOM = window_width < 480 ? window_width / 180 : 3.33
+    const ZOOM = this.decideZoomLevel(settings.isMobile)
     let v_width = settings.width * ZOOM,
       v_height = settings.height * ZOOM,
       v_depth = settings.depth * ZOOM
+    let windowScale = settings.isMobile ? 'scale(.95, .97)' : 'scale(.97, .97)'
     this.setState({
       rootSize: { height: String(v_height + 60) + 'pt' },
       size: {
@@ -56,7 +55,7 @@ class DevicePreview extends Component {
       window_size: {
         width: String(v_width) + 'pt',
         height: String(v_height) + 'pt',
-        transform: 'scale(.95, .97)',
+        transform: windowScale,
       },
       side_view_size: {
         height: String(v_height) + 'pt',
@@ -67,21 +66,29 @@ class DevicePreview extends Component {
       },
       caption_area: {
         height: String(v_height) + 'pt',
-      }
+      },
     })
   }
 
   initialize(props) {
-    if (props.width == null) {
-      console.warn('[DEBUG](devicePreview) use default')
-      return
-    } else {
-      settings.width = props.width
-      settings.height = props.height
-      settings.depth = props.depth
-      settings.inch = props.inch
-      settings.weight = props.weight
+    settings.width = props.width
+    settings.height = props.height
+    settings.depth = props.depth
+    settings.inch = props.inch
+    settings.weight = props.weight
+    settings.isMobile = props.isMobile
+  }
+
+  decideZoomLevel(isMobile) {
+    let window_width = window.outerWidth
+    let ZOOM = 0
+    ZOOM = window_width < 1024 ? window_width / 180 : 3.33
+
+    if (!isMobile) {
+      ZOOM /= window_width < 1024 ? 3.6 : 1.55
     }
+    console.warn(ZOOM)
+    return ZOOM
   }
 
   render() {
@@ -101,18 +108,12 @@ class DevicePreview extends Component {
               <br />
               {settings.width + 'mm'}
             </p>
-            <div
-              className={styles.device_window}
-              style={this.state.window_size}
-            >
+            <div className={styles.device_window} style={this.state.window_size}>
               <span className={styles.window_text}>
                 {settings.inch}
                 <p>インチ</p>
               </span>
-              <div
-                className={styles.device_window_inner}
-                style={this.state.window_border}
-              ></div>
+              <div className={styles.device_window_inner} style={this.state.window_border}></div>
             </div>
           </div>
           <p style={this.state.caption_area} className={`${styles.text} ${styles.text_height}`}>
