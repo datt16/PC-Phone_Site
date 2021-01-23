@@ -12,7 +12,7 @@ tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
 carrier: ['au', 'docomo', 'SoftBank']
 # CPU
-cpu: 'A13 Bionic'
+cpu: ['A13 Bionic']
 # RAM
 ram: ['不明']
 # ROM || (HDD || SSD)

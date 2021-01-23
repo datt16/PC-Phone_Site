@@ -12,7 +12,7 @@ tags: ['ASUS', 'Android', 'Rog']
 # キャリア
 carrier: ['SIMフリー']
 # CPU
-cpu: 'Snapdragon 865 Plus'
+cpu: ['Snapdragon 865 Plus']
 # RAM
 ram: ['12GB', '16GB']
 # ROM || (HDD || SSD)

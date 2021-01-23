@@ -12,7 +12,7 @@ tags: ['Google', 'Android', 'Google Pixel']
 # キャリア
 carrier: ['au', 'SoftBank']
 # CPU
-cpu: 'Snapdragon 765G'
+cpu: ['Snapdragon 765G']
 # RAM
 ram: '8GB'
 # ROM || (HDD || SSD)

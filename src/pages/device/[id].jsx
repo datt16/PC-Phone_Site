@@ -46,11 +46,13 @@ export default function Home() {
                 ram={article.ram}
                 storage={article.storage}
                 battery={article.battery}
+                gpu={article.gpu}
                 camera={article.camera}
                 biometrics={article.biometrics}
                 ipCode={article.ipCode}
                 earphone={article.hasEarphone}
                 charge={article.charge}
+                isMobile={!(article.type=='pc')}
               />
 
               <div className={`${styles.imgbox} ${styles.preview}`}>

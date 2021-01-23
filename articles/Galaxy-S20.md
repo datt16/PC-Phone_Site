@@ -12,7 +12,7 @@ tags: ['Samsung', 'Android', 'Galaxy']
 # キャリア
 carrier: ['au', 'docomo']
 # CPU
-cpu: 'Snapdragon 865'
+cpu: ['Snapdragon 865']
 # RAM
 ram: ['12GB']
 # ROM || (HDD || SSD)

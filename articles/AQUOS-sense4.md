@@ -12,7 +12,7 @@ tags: ['Sharp', 'Android', 'AQUOS']
 # キャリア
 carrier: ['au', 'SoftBank']
 # CPU
-cpu: 'Snapdragon'
+cpu: ['Snapdragon 720G']
 # RAM
 ram: ['4GB']
 # ROM || (HDD || SSD)

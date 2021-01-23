@@ -2,6 +2,7 @@ import React from 'react'
 import { FiCpu, FiMinus, FiCamera, FiCircle, FiX } from 'react-icons/fi'
 import { FaMemory, FaBatteryThreeQuarters } from 'react-icons/fa'
 import { BiFace, BiFingerprint } from 'react-icons/bi'
+import { RiCpuLine } from 'react-icons/ri'
 import { MdSdStorage } from 'react-icons/md'
 import styles from '../styles/DeviceSpec.module.scss'
 
@@ -21,6 +22,10 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'battery':
       icon = <FaBatteryThreeQuarters size={30} />
       iconText = 'バッテリー'
+      break
+    case 'gpu':
+      icon = <RiCpuLine size={35} />
+      iconText = 'GPU'
       break
     case 'storage':
       icon = <MdSdStorage size={30} />
