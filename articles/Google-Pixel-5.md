@@ -8,9 +8,9 @@ image: '/Google-Pixel-5.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Google', 'andoroid', 'Google Pixel']
+tags: ['Google', 'Android', 'Google Pixel']
 # キャリア
-carrier: ['au', 'softbank']
+carrier: ['au', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 765G'
 # RAM
@@ -61,4 +61,4 @@ valuation: 5
 
 ### 短所
 
-- 4 と比べ cpu などのスペックが少し低め
+- 前モデルの Pixel 4 と比べるとスペックが少し低め

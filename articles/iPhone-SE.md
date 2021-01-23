@@ -10,13 +10,13 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo', 'softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
-cpu: 'A13Bionicチップ'
+cpu: 'A13 Bionic'
 # RAM
-ram: '12GB'
+ram: ['不明']
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: ['64GB', '128GB', '256GB']
 # バッテリー
 battery: '1821mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1200万画素', '望遠: 1200万画素']
 # 生体認証
 biometrics: ['顔']
 # 防水・防塵
-ipCode: 'IP67'
+ipCode: ['IP67']
 # 価格
 price: 44800
 # イヤホンジャック

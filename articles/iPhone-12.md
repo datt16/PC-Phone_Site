@@ -10,13 +10,13 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo', 'softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
-cpu: 'A14Bionicチップ'
+cpu: 'A14 Bionic'
 # RAM
-ram: '4GB'
+ram: ['不明']
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: ['64GB', '128GB', '256GB']
 # バッテリー
 battery: '3110mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1200万画素', '望遠: 1200万画素']
 # 生体認証
 biometrics: ['顔']
 # 防水・防塵
-ipCode: 'IP68'
+ipCode: ['IP68']
 # 価格
 price: 91300
 # イヤホンジャック

@@ -10,13 +10,13 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Sony', 'Android', 'Xperia']
 # キャリア
-carrier: ['au', 'docomo', 'softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 865'
 # RAM
-ram: '8GB'
+ram: ['8GB']
 # ROM || (HDD || SSD)
-storage: '128GB'
+storage: ['128GB']
 # バッテリー
 battery: '4000mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1220万画素', '望遠: 1220万画素']
 # 生体認証
 biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IP5X/IPX8'
+ipCode: ['IP5X', 'IPX8', 'IP6X']
 # 価格
 price: 99000
 # イヤホンジャック

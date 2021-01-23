@@ -10,13 +10,13 @@ type: 'mobile'
 # 検索の際に使うタグです
 tags: ['Sharp', 'Android', 'AQUOS']
 # キャリア
-carrier: ['au', 'softbank']
+carrier: ['au', 'SoftBank']
 # CPU
 cpu: 'Snapdragon 765'
 # RAM
-ram: '8GB'
+ram: ['8GB']
 # ROM || (HDD || SSD)
-storage: '128GB'
+storage: ['128GB']
 # バッテリー
 battery: '4050mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1310万画素', '望遠: 800万画素']
 # 生体認証
 biometrics: ['指紋', '顔']
 # 防水・防塵
-ipCode: 'IP5X'
+ipCode: ['IP5X']
 # 価格
 price: 65520
 # イヤホンジャック
