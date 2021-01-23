@@ -48,7 +48,7 @@ valuation: 3
 gpu: ["Intel UHD Graphics", "Intel Iris Xe Graphics"]
 ---
 
-# XPS 13 2020
+# XPS 13 (2020)
 
 ## 発売日時
 
