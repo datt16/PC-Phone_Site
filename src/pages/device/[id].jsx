@@ -54,7 +54,7 @@ export default function Home() {
                 ipCode={article.ipCode}
                 earphone={article.hasEarphone}
                 charge={article.charge}
-                isMobile={(article.type=='pc')?false:true}
+                isMobile={!(article.type=='pc')}
               />
 
               <div className={`${styles.imgbox} ${styles.preview}`}>
