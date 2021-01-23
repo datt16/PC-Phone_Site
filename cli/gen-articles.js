@@ -11,12 +11,14 @@ for (let p of paths) {
   if (fileName.startsWith('_')) console.log(`${fileName} をスキップしました`)
   if (fs.statSync(p).isFile() && !fileName.startsWith('_')) {
     const result = metadataParser(fs.readFileSync(p).toString('utf-8'))
+    const cpu = String(result.metadata.cpu).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const tags = String(result.metadata.tags).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const ram = String(result.metadata.ram).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const storage = String(result.metadata.storage).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const camera = String(result.metadata.camera).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const biometrics = String(result.metadata.biometrics).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     const ipCode = String(result.metadata.ipCode).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
+    const gpu = String(result.metadata.gpu).split(',').filter(t => t !== 'undefined').map((t) => `'${t}'`).join(', ')
     fileText += '  {\n' +
       `    id: '${fileName}',\n` +
       `    name: '${result.metadata.name ? result.metadata.name : ''}',\n` +
@@ -27,13 +29,14 @@ for (let p of paths) {
       `    screen: ${result.metadata.screen ? result.metadata.screen.replace('インチ', '') : 0},\n` +
       `    image: '${result.metadata.image ? result.metadata.image : ''}',\n` +
       `    type: '${result.metadata.type ? result.metadata.type : ''}',\n` +
-      `    cpu: '${result.metadata.cpu ? result.metadata.cpu : ''}',\n` +
+      `    cpu: [${cpu}],\n` +
       `    ram: [${ram}],\n` +
       `    storage: [${storage}],\n` +
       `    battery: '${result.metadata.battery ? result.metadata.battery : ''}',\n` +
       `    camera: [${camera}],\n` +
       `    biometrics: [${biometrics}],\n` +
       `    ipCode: [${ipCode}],\n` +
+      `    gpu: [${gpu}],\n` +
       `    hasEarphone: ${result.metadata.hasEarphone ? true : false},\n` +
       `    charge: '${result.metadata.charge ? result.metadata.charge : ''}',\n` +
       `    tags: [${tags}],\n` +
