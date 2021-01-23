@@ -12,7 +12,7 @@ tags: ['Hisence', 'Android', 'E-inc']
 # キャリア
 carrier: ['SIMフリー']
 # CPU
-cpu: 'UNISOC Tiger T610'
+cpu: ['UNISOC Tiger T610']
 # RAM
 ram: ['4GB', '6GB']
 # ROM || (HDD || SSD)

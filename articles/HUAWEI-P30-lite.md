@@ -12,7 +12,7 @@ tags: ['HUAWEI', 'Android']
 # キャリア
 carrier: ['au', 'Line', 'Y!mobile']
 # CPU
-cpu: 'Kirin 710'
+cpu: ['Kirin 710']
 # RAM
 ram: '4GB'
 # ROM || (HDD || SSD)

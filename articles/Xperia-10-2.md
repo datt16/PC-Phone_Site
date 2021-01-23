@@ -12,7 +12,7 @@ tags: ['Sony', 'Android', 'Xperia']
 # キャリア
 carrier: ['au', 'docomo', 'SoftBank']
 # CPU
-cpu: 'Snapdragon 665'
+cpu: ['Snapdragon 665']
 # RAM
 ram: ['4GB']
 # ROM || (HDD || SSD)

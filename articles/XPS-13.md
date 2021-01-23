@@ -29,7 +29,7 @@ width: "295.70mm"
 ## 厚さ
 thickness: "14.80mm"
 # 重さ
-weight: "1.25kg"
+weight: "1250g"
 # カメラ
 camera: ["900万画素"]
 # 生体認証
