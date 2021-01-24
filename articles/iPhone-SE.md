@@ -1,22 +1,22 @@
 ---
 # 記事の ID になります
-id: 'iPhone SE'
+id: 'iPhone-SE'
 # 一覧表示の時に表示される名前になります
 name: 'iPhone SE'
 # 画像を指定します
-image: '/img.jpg'
+image: '/iPhone-SE.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple','iOS','iPhone']
+tags: ['Apple', 'iOS', 'iPhone']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
-cpu: ['A13Bionicチップ']
+cpu: ['A13 Bionic']
 # RAM
-ram: '12GB'
+ram: ['不明']
 # ROM || (HDD || SSD)
-storage: '64or128or256GB'
+storage: ['64GB', '128GB', '256GB']
 # バッテリー
 battery: '1821mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 1200万画素', '望遠: 1200万画素']
 # 生体認証
 biometrics: ['顔']
 # 防水・防塵
-ipCode: 'IP67'
+ipCode: ['IP67']
 # 価格
 price: 44800
 # イヤホンジャック
@@ -48,14 +48,18 @@ charge: 'Lightning'
 # iPhone SE
 
 ## 発売日時
+
 2020年4月24日
   
 ## 特徴
 
 ### 長所
+
 - 小型でコンパクト
 - 非常に安価で高性能
+
 ### 短所
+
 - イヤホンジャックがない
 
 ## 高性能CPU

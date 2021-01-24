@@ -8,14 +8,17 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>PC-Phone Site</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
+        <div className={styles.form}>
+          <label>すべての記事</label>
+        </div>
         <div className={styles.grid}>
-          {articles.map((a) => {
-            return <ItemCard key={a.name} data={a} />
+          {articles.map((a, idx) => {
+            return <ItemCard key={idx} data={a} />
           })}
         </div>
       </main>

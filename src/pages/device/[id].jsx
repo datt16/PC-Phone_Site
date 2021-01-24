@@ -4,37 +4,76 @@ import styles from '../../styles/Device.module.css'
 import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
+import { AiOutlineTags } from 'react-icons/ai'
+
+import DeviceSpec from '../../components/deviceSpec'
+import DevicePreview from '../../components/devicePreview'
 
 export default function Home() {
   const router = useRouter()
   const { id } = router.query
-  const article = articles.find(a => a.id == id)
+  const article = articles.find((a) => a.id == id)
+
+  const tags = []
+  article.tags.forEach((t, idx) => {
+    tags.push(
+      <span key={idx} className={styles.tag}>
+        #{t}
+      </span>
+    )
+  })
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Search | PC Phone Site</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      {article ? (
+        <>
+          <Head>
+            <title>{article.name} | PC Phone Site</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-      <main className={styles.main}>
-        {article ? (
-          <>
-            <h1>{ article.name }</h1>
-            <p>Type: { article.type }</p>
-            <p>Tags: { article.tags.join(', ') }</p>
-            <div className={styles.imgbox}>
-              <img className={styles.img} src={article.image} />
-            </div>
-            <ReactMarkdown>
-              {article.content}
-            </ReactMarkdown>
-          </>
-        ) : (
-          <>
-            <h1>404 Not Found.</h1>
-          </>
-        )}
-      </main>
+          <main className={styles.main}>
+            <img className={styles.img} src={article.image} />
+            <article className={styles.article}>
+              <h1>{article.name}</h1>
+              <p className={styles.tags}>
+                <AiOutlineTags size={23} />
+                {tags}
+              </p>
+
+              <DeviceSpec
+                cpu={article.cpu}
+                ram={article.ram}
+                storage={article.storage}
+                battery={article.battery}
+                gpu={article.gpu}
+                camera={article.camera}
+                biometrics={article.biometrics}
+                ipCode={article.ipCode}
+                earphone={article.hasEarphone}
+                charge={article.charge}
+                isMobile={!(article.type == 'pc')}
+              />
+
+              <div className={`${styles.imgbox} ${styles.preview}`}>
+                <DevicePreview
+                  width={article.width}
+                  height={article.height}
+                  depth={article.thickness}
+                  inch={article.screen}
+                  weight={article.weight}
+                  isMobile={!(article.type == 'pc')}
+                />
+              </div>              
+              <ReactMarkdown className={styles.markdown}>{article.content}</ReactMarkdown>
+            </article>
+          </main>
+        </>
+      ) : (
+        <>
+          <h1>404 Not Found.</h1>
+        </>
+      )}
     </div>
   )
 }
@@ -54,6 +93,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   return {
-    props: articles.find(a => a.id == params.id),
+    props: articles.find((a) => a.id == params.id),
   }
 }

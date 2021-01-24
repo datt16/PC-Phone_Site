@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 
 const Footer = function Footer() {
@@ -6,7 +7,9 @@ const Footer = function Footer() {
     <footer className={styles.footer}>
       <div className={styles.caption}>
         <h1>
-          <a href="/">PC-Phone Site</a>
+          <Link href='/'>
+            <a>PC-Phone Site</a>
+          </Link>
         </h1>
         <br></br>
         <span className={styles.caption}>created by 6-Group</span>
@@ -14,10 +17,14 @@ const Footer = function Footer() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">PC</a>
+            <Link href='/type/[id]' as='/type/pc'>
+              <a>PC</a>
+            </Link>
           </li>
           <li>
-            <a href="#">Phone</a>
+            <Link href='/type/[id]' as='/type/mobile'>
+              <a>Phone</a>
+            </Link>
           </li>
         </ul>
       </nav>

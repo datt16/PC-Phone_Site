@@ -1,22 +1,22 @@
 ---
 # 記事の ID になります
-id: 'Xperia 10 Ⅱ'
+id: 'Xperia-10-2'
 # 一覧表示の時に表示される名前になります
 name: 'Xperia 10 Ⅱ'
 # 画像を指定します
-image: '/img.jpg'
+image: '/Xperia-10-2.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Sony','Android','Xperia']
+tags: ['Sony', 'Android', 'Xperia']
 # キャリア
-carrier: ['au', 'docomo','softbank']
+carrier: ['au', 'docomo', 'SoftBank']
 # CPU
 cpu: ['Snapdragon 665']
 # RAM
-ram: '4GB'
+ram: ['4GB']
 # ROM || (HDD || SSD)
-storage: '64GB'
+storage: ['64GB']
 # バッテリー
 battery: '3600mAh'
 # 画面サイズ
@@ -35,7 +35,7 @@ camera: ['広角: 800万画素', '望遠: 800万画素']
 # 生体認証
 biometrics: ['指紋']
 # 防水・防塵
-ipCode: 'IP5X,IPX8'
+ipCode: ['IPX5', 'IPX8', 'IP6X']
 # 価格
 price: 39600
 # イヤホンジャック
@@ -48,14 +48,18 @@ charge: 'Type-C'
 # Xperia 10 Ⅱ
 
 ## 発売日時
+
 2020年5月29日
   
 ## 特徴
 
 ### 長所
+
 - 軽量でコンパクト
 - マルチウインドウを使いやすい
+
 ### 短所
+
 - カメラ性能はそこそこ
 - サイズが縦長のため慣れが必要
 

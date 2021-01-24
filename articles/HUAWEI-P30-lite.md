@@ -1,16 +1,16 @@
 ---
 # 記事の ID になります
-id: 'HUAWEI P30 lite'
+id: 'HUAWEI-P30-lite'
 # 一覧表示の時に表示される名前になります
 name: 'HUAWEI P30 lite'
 # 画像を指定します
-image: '/img.jpg'
+image: '/P30-Lite.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['HUAWEI','Android','HUAWEI']
+tags: ['HUAWEI', 'Android']
 # キャリア
-carrier: ['au', 'Line','Y!mobile']
+carrier: ['au', 'Line', 'Y!mobile']
 # CPU
 cpu: ['Kirin 710']
 # RAM
@@ -48,14 +48,18 @@ charge: 'Type-C'
 # Galaxy S20
 
 ## 発売日時
+
 2019年8月8日
   
 ## 特徴
 
 ### 長所
+
 - 非常に安価
-- 被写界深度レンズという特殊なレンズがある
+- 被写界深度レンズという特殊なレンズがありるため、自然なボケ感のある写真が撮影できる
+
 ### 短所
+
 - 発売が2019年のため古い機種
   
 ## 120度超広角カメラ搭載
