@@ -52,7 +52,7 @@ export default function Home() {
                 ipCode={article.ipCode}
                 earphone={article.hasEarphone}
                 charge={article.charge}
-                isMobile={!(article.type=='pc')}
+                isMobile={!(article.type == 'pc')}
               />
 
               <div className={`${styles.imgbox} ${styles.preview}`}>
@@ -62,8 +62,9 @@ export default function Home() {
                   depth={article.thickness}
                   inch={article.screen}
                   weight={article.weight}
+                  isMobile={!(article.type == 'pc')}
                 />
-              </div>
+              </div>              
               <ReactMarkdown className={styles.markdown}>{article.content}</ReactMarkdown>
             </article>
           </main>
