@@ -12,7 +12,7 @@ tags: ['Sony','Android','Xperia']
 # キャリア
 carrier: ['au', 'docomo','softbank']
 # CPU
-cpu: 'Snapdragon 865'
+cpu: ['Snapdragon 865']
 # RAM
 ram: '8GB'
 # ROM || (HDD || SSD)
@@ -42,19 +42,29 @@ price: 99000
 hasEarphone: true
 # 充電
 charge: 'Type-C'
-# 評価 (1 ~ 5)
-valuation: 5
+
 ---
 
 # Xperia5 Ⅱ
 
 ### 発売日時
-- 2020年10月17日
+2020年10月17日
   
 **特徴**
+
 ### 長所
-- 軽量でコンパクト
-- マルチウインドウを使いやすい
+
+軽量でコンパクト
+
+マルチウインドウを使いやすい
+
 ### 短所
-- カメラ性能はそこそこ
-- サイズが縦長のため慣れが必要
+
+カメラ性能はそこそこ
+
+サイズが縦長のため慣れが必要
+
+**高音質なAUDIO**
+
+DSEE Ultimateによってストリーミングサービスで聴く最新曲も、ハイレゾ相当の高音質に。
+また、Dolby ATMOSで臨場感のある立体サウンドを再生できる。
