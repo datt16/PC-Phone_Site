@@ -12,11 +12,6 @@
   flex-direction: column;
 }
 
-.notifyText {
-  text-align: end;
-  font-size: .8rem;
-}
-
 .imgbox {
   min-width: 100%;
   max-width: 100%;

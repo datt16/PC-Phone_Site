@@ -85,7 +85,7 @@ class DevicePreview extends Component {
     ZOOM = window_width < 1024 ? window_width / 180 : 3.33
 
     if (!isMobile) {
-      ZOOM /= window_width < 1024 ? 3.6 : 1.55
+      ZOOM /= window_width < 1024 ? 3.4 : 1.55
     }
     return ZOOM
   }
@@ -128,6 +128,7 @@ class DevicePreview extends Component {
             </span>
           </p>
         </div>
+        <p className={styles.notifyText}>実際のサイズや形状とは異なることがあります。</p>
       </div>
     )
   }

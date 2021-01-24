@@ -64,8 +64,7 @@ export default function Home() {
                   weight={article.weight}
                   isMobile={!(article.type == 'pc')}
                 />
-              </div>
-              <p className={styles.notifyText}>実際のサイズや形状とは異なることがあります。</p>
+              </div>              
               <ReactMarkdown className={styles.markdown}>{article.content}</ReactMarkdown>
             </article>
           </main>
