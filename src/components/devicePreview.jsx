@@ -82,7 +82,7 @@ class DevicePreview extends Component {
   decideZoomLevel(isMobile) {
     let window_width = window.outerWidth
     let ZOOM = 0
-    ZOOM = window_width < 1024 ? window_width / 180 : 3.33
+    ZOOM = window_width < 1024 ? window_width / 180 : 3.00
 
     if (!isMobile) {
       ZOOM /= window_width < 1024 ? 3.4 : 1.55
