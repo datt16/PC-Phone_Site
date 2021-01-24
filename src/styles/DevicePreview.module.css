@@ -1,6 +1,6 @@
 .root {
   width: 100%;
-  margin: 10px 50px 10px 10px;
+  margin: 30px 50px 0 10px;
 }
 
 .wrapper {
@@ -114,6 +114,9 @@
 }
 
 @media (max-width: 480px) {
+  .root {
+    margin: 10px 50px 10px 10px;
+  }
   .side {
     margin-right: 1.5em;
   }
