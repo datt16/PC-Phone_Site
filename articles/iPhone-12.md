@@ -8,7 +8,7 @@ image: '/iPhone-12.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Apple', 'iOS', 'iPhone']
+tags: ['Apple', 'iOS', 'iPhone', '5G']
 # キャリア
 carrier: ['au', 'docomo', 'SoftBank']
 # CPU

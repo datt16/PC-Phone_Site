@@ -45,7 +45,7 @@ charge: 'Type-C'
 
 ---
 
-# Galaxy S20
+# HUAWEI P30 Lite
 
 ## 発売日時
 
