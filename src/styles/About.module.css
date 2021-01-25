@@ -1,42 +1,35 @@
-
 .container {
-  min-height: 100vh;
   padding: .5rem;
-  margin: 0 auto;
+  margin: auto;
   width: 1000px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.main {
+  margin-top: 80px;
 }
 
 .container h2 {
-  margin-bottom: 0;
+  margin: 3rem 0 0 0;
+}
+
+.container a {
+  font-size: 2rem;
 }
 
 .githubLink {
-  font-size: 2.5em;
-  margin-left: 1rem;
+  margin-left: .3rem;
 }
 
-.githubLinkArea {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 50%,
-    rgb(25, 25, 25) 50%
-  );
-  background-position: 0 0;
-  background-size: 200% auto;
-  padding: 1rem;
-  color: rgb(25, 25, 25);
+.siteArea {
+  margin: auto;
+  justify-content: center;
+  padding: .5rem;
   display: flex;
   align-items: center;
-}
-
-.githubLinkArea:hover {
-  animation: show cubic-bezier(.075, .82, .165, 1) 1s;
-  animation-direction: alternate;
-  cursor: pointer;
-  color: white;
 }
 
 @keyframes show {
