@@ -19,7 +19,7 @@ export default function Home() {
 
   const filterList = (e) => {
     const tag = e
-    const data = search(tag, '')
+    const data = search(tag, type)
     setArticles(data)
     setTmpQuery(tag)
   }
