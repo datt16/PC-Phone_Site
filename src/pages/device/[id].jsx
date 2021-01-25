@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../../styles/Device.module.css'
 import articles from '../../lib/articles'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { AiOutlineTags } from 'react-icons/ai'
 
@@ -22,6 +23,19 @@ export default function Home() {
       </span>
     )
   })
+
+  const linkBlock = ({ href, children }) => {
+    if (href.startsWith('/')) {
+      return (
+        <Link href={href}>
+          <a>
+            { children }
+          </a>
+        </Link>
+      )
+    }
+    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+  }
 
   return (
     <div className={styles.container}>
@@ -64,8 +78,14 @@ export default function Home() {
                   weight={article.weight}
                   isMobile={!(article.type == 'pc')}
                 />
-              </div>              
-              <ReactMarkdown className={styles.markdown}>{article.content}</ReactMarkdown>
+              </div>
+              <ReactMarkdown
+                source={article.content}
+                className={styles.markdown}
+                renderers={{
+                  link: linkBlock,
+                }}
+              />
             </article>
           </main>
         </>
