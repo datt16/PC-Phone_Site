@@ -42,8 +42,8 @@ export default function Home() {
         arr.push(b)
       })
     })
-  
-  const ItemList = Array.from(new Set(arr)).map((i) => (
+
+  const ItemList = Array.from(new Set(arr)).sort().map((i) => (
     <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
       {i}
     </li>
