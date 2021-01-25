@@ -14,9 +14,9 @@ carrier: []
 # CPU
 cpu: ["Core i3-1115G4", "Core i5-1135G7", "Core i7-1165G7"]
 # RAM
-ram: ["8-32GB"]
+ram: ["16GB", "32GB"]
 # ROM || (HDD || SSD)
-storage: ["SSD: 256GB-2TB"]
+storage: ["SSD: 512GB", "SSD: 1TB"]
 # バッテリー
 battery: ""
 # 画面サイズ
@@ -31,13 +31,13 @@ thickness: "14.80mm"
 # 重さ
 weight: "1250g"
 # カメラ
-camera: ["900万画素"]
+camera: ["92万画素"]
 # 生体認証
 biometrics: ["指紋", "顔"]
 # 防水・防塵
 ipCode: ""
 # 価格
-price: 33000
+price: 246930
 # イヤホンジャック
 hasEarphone: true
 # 充電
@@ -72,4 +72,5 @@ gpu: ["Intel UHD Graphics", "Intel Iris Xe Graphics"]
 
 ## 強力なプロセッサ
 
-インテル Evo プラットフォームを採用することで、バッテリー持続時間は長く、高いパフォーマンスを実現している。また、Intel Iris Xe グラフィックスを搭載していて、以前は重くて動作できなかった PC ゲームや、動画編集も快適にこなせる製品となっている。
+インテル Evo プラットフォームを採用することで、バッテリー持続時間は長く、高いパフォーマンスを実現している。  
+また、Intel Iris Xe グラフィックスを搭載していて、以前は重くて動作できなかった PC ゲームや、動画編集も快適にこなせる製品となっている。
