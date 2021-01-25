@@ -8,7 +8,7 @@ image: "/Surface-Laptop-3.jpg"
 # pc か mobile を指定してください
 type: "pc"
 # 検索の際に使うタグです
-tags: ["Microsoft", "Windows10", "laptop", "Surface"]
+tags: ["Microsoft", "Windows10", "laptop", "Surface", "3:2"]
 # キャリア
 carrier: []
 # CPU
