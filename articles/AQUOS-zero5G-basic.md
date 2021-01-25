@@ -8,7 +8,7 @@ image: '/AQUOS-zero5G-basic.jpg'
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
-tags: ['Sharp', 'Android', 'AQUOS']
+tags: ['Sharp', 'Android', 'AQUOS', '5G']
 # キャリア
 carrier: ['au', 'SoftBank']
 # CPU

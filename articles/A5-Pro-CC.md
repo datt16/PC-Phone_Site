@@ -46,7 +46,7 @@ charge: 'Type-C'
 valuation: 3
 ---
 
-# AQUOS sense4
+# A5 Pro CC
 
 ## 発売日時
 

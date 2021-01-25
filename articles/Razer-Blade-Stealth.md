@@ -48,7 +48,7 @@ valuation: 3
 gpu: ["NVIDIA GeForce GTX 1650 Ti Max Q Design 4GB GDDR6 VRAM"]
 ---
 
-# ThinkPad X13 Gen1
+# Razer Blade Stealth
 
 ## 発売日時
 
