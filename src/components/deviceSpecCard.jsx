@@ -17,7 +17,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'ram':
       icon = <FaMemory size={30} />
       iconText = 'RAM'
-      value = value.sort().filter(v => v != '')
+      value = value.filter(v => v != '')
       break
     case 'battery':
       icon = <FaBatteryThreeQuarters size={30} />
