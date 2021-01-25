@@ -16,7 +16,7 @@ cpu: ["Apple M1"]
 # RAM
 ram: ["8GB ユニファイドメモリ", "16GB ユニファイドメモリ"]
 # ROM || (HDD || SSD)
-storage: ["256GB SSD", "512GB SSD", "1TB SSD", "2TB SSD"]
+storage: ["256GB SSD / 512GB SSD", "1TB SSD / 2TB SSD"]
 # バッテリー
 battery: ""
 # 画面サイズ
