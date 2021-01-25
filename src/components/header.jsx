@@ -24,6 +24,11 @@ const Header = function Header() {
             </Link>
           </li>
           <li>
+            <Link href="/about" as="/about">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
             <SearchBox />
           </li>
         </ul>

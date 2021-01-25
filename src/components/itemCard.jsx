@@ -11,7 +11,7 @@ const itemCard = (props) => {
         {props && props.data &&
         <>
           <div className={styles.image}>
-            <img src={props.data.image ? props.data.image : '/000000-0.png'} />
+            <img src={props.data.image ? props.data.image : '/no-image.svg'} />
           </div>
           <span className={styles.name}>{ props.data.name }</span>
           <span className={styles.tags}>

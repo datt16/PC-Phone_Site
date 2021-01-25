@@ -7,7 +7,7 @@ const Footer = function Footer() {
     <footer className={styles.footer}>
       <div className={styles.caption}>
         <h1>
-          <Link href='/'>
+          <Link href="/">
             <a>PC-Phone Site</a>
           </Link>
         </h1>
@@ -17,13 +17,18 @@ const Footer = function Footer() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link href='/type/[id]' as='/type/pc'>
+            <Link href="/type/[id]" as="/type/pc">
               <a>PC</a>
             </Link>
           </li>
           <li>
-            <Link href='/type/[id]' as='/type/mobile'>
+            <Link href="/type/[id]" as="/type/mobile">
               <a>Phone</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" as="/about">
+              <a>About</a>
             </Link>
           </li>
         </ul>
