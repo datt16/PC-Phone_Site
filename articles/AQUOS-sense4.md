@@ -4,7 +4,7 @@ id: 'AQUOS-sense4'
 # 一覧表示の時に表示される名前になります
 name: 'AQUOS sense4'
 # 画像を指定します
-image: '/AQUOS-sense4.jpg'
+image: ''
 # pc か mobile を指定してください
 type: 'mobile'
 # 検索の際に使うタグです
