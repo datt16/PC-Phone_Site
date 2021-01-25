@@ -36,6 +36,10 @@
   margin: 0 .175rem;
 }
 
+.markdown a {
+  color: #0345fc;
+}
+
 .markdown h1 {
   display: none;
 }

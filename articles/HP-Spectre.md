@@ -8,7 +8,7 @@ image: "/HP-spectre.jpg"
 # pc か mobile を指定してください
 type: "pc"
 # 検索の際に使うタグです
-tags: ["HP", "Windows10", "laptop", "2in1"]
+tags: ["HP", "Windows10", "laptop", "2in1", "3:2"]
 # キャリア
 carrier: []
 # CPU
