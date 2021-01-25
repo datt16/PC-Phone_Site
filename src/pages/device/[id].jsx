@@ -47,7 +47,9 @@ export default function Home() {
           </Head>
 
           <main className={styles.main}>
-            <img className={styles.img} src={article.image} />
+            {article.image &&
+              <img className={styles.img} src={article.image} />
+            }
             <article className={styles.article}>
               <h1>{article.name}</h1>
               <p className={styles.tags}>
