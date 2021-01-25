@@ -56,7 +56,7 @@
   font-size: .8rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   .card:hover {
     transform: none;
   }
