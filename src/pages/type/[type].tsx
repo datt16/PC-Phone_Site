@@ -43,11 +43,13 @@ export default function Home() {
       })
     })
 
-  const ItemList = Array.from(new Set(arr)).sort().map((i) => (
-    <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
-      {i}
-    </li>
-  ))
+  const ItemList = Array.from(new Set(arr))
+    .sort()
+    .map((i) => (
+      <li key={i} value={i} onClick={filterList.bind(this, i)}>
+        {i}
+      </li>
+    ))
   const LabelText = type == 'pc' ? 'PC' : 'スマホ'
 
   useEffect(() => {
@@ -58,12 +60,14 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Search | PC Phone Site</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.form}>
-          <label>{LabelText}を探す:&nbsp;{tmpQuery}</label>
+          <label>
+            {LabelText}を探す:&nbsp;{tmpQuery}
+          </label>
           <button onClick={handlerModalOepn}>選択</button>
           <Modal open={open} handleClose={handlerModalClose} key={open}>
             <div>
@@ -71,7 +75,7 @@ export default function Home() {
               <p onClick={handlerModalClose}>X</p>
             </div>
             <ul>
-              <li value='' name='none' onClick={filterList.bind(this, '')}>
+              <li value="" onClick={filterList.bind(this, '')}>
                 選択解除
               </li>
               {ItemList}

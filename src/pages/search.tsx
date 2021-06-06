@@ -36,7 +36,7 @@ export default function Home() {
   })
 
   const ItemList = Array.from(new Set(arr)).map((i) => (
-    <li key={i} value={i} name={i} onClick={filterList.bind(this, i)}>
+    <li key={i} value={i} onClick={filterList.bind(this, i)}>
       {i}
     </li>
   ))
@@ -58,7 +58,7 @@ export default function Home() {
               <p onClick={handlerModalClose}>X</p>
             </div>
             <ul>
-              <li value="" name="none" onClick={filterList.bind(this, '')}>
+              <li value="" onClick={filterList.bind(this, '')}>
                 選択解除
               </li>
               {ItemList}
