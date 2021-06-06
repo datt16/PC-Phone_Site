@@ -1,5 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Props } from 'react'
 import styles from '../styles/DevicePreview.module.css'
+
+type PropType = {
+  width: number
+  height: number
+  depth: number
+  inch: number
+  weight: number
+  isMobile: boolean
+}
 
 let settings = {
   width: 70.9,
@@ -10,8 +19,8 @@ let settings = {
   isMobile: true,
 }
 
-const DevicePreview = (props) => {
-  const initialize = (props) => {
+const DevicePreview = (props: PropType) => {
+  const initialize = (props: PropType) => {
     settings.width = props.width
     settings.height = props.height
     settings.depth = props.depth
@@ -46,7 +55,7 @@ const DevicePreview = (props) => {
     },
   })
 
-  const decideZoomLevel = (isMobile) => {
+  const decideZoomLevel = (isMobile: boolean) => {
     let window_width = window.outerWidth
     let ZOOM = 0
     ZOOM = window_width < 1024 ? window_width / 180 : 3.0

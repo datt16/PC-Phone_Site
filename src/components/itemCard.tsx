@@ -3,8 +3,13 @@ import styles from '../styles/ItemCard.module.css'
 import Link from 'next/link'
 
 import { AiOutlineTags } from 'react-icons/ai'
+import { articleType } from '../lib/articles'
 
-const itemCard = (props) => {
+type PropType = {
+  data: articleType
+}
+
+const itemCard = (props:PropType) => {
   return (
     <Link href={`/device/${props.data.id}`}>
       <a className={styles.card}>
