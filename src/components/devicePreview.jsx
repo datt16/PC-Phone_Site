@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/DevicePreview.module.css'
 
 let settings = {
@@ -10,43 +10,60 @@ let settings = {
   isMobile: true,
 }
 
-class DevicePreview extends Component {
-  constructor(props) {
-    super(props)
-    this.initialize(props)
-    this.state = {
-      rootSize: {
-        height: '0',
-      },
-      size: {
-        width: '0',
-        height: '0',
-      },
-      caption_area: {
-        height: '0',
-      },
-      window_size: {
-        width: '0',
-        height: '0',
-        transform: '',
-      },
-      side_view_size: {
-        width: '0',
-        height: '0',
-      },
-      window_border: {
-        borderWidth: '',
-      },
+export const DevicePreview = (props) => {
+  initialize(props)
+  const [state, setState] = useState({
+    rootSize: {
+      height: '0',
+    },
+    size: {
+      width: '0',
+      height: '0',
+    },
+    caption_area: {
+      height: '0',
+    },
+    window_size: {
+      width: '0',
+      height: '0',
+      transform: '',
+    },
+    side_view_size: {
+      width: '0',
+      height: '0',
+    },
+    window_border: {
+      borderWidth: '',
+    },
+  })
+
+  const decideZoomLevel = (isMobile) => {
+    let window_width = window.outerWidth
+    let ZOOM = 0
+    ZOOM = window_width < 1024 ? window_width / 180 : 3.0
+
+    if (!isMobile) {
+      ZOOM /= window_width < 1024 ? 3.4 : 1.55
     }
+    return ZOOM
   }
 
-  componentDidMount() {
-    const ZOOM = this.decideZoomLevel(settings.isMobile)
+  const initialize = (props) => {
+    settings.width = props.width
+    settings.height = props.height
+    settings.depth = props.depth
+    settings.inch = props.inch
+    settings.weight = props.weight
+    settings.isMobile = props.isMobile
+  }
+
+  useEffect(() => {
+    const ZOOM = decideZoomLevel(settings.isMobile)
     let v_width = settings.width * ZOOM,
       v_height = settings.height * ZOOM,
       v_depth = settings.depth * ZOOM
     let windowScale = settings.isMobile ? 'scale(.95, .97)' : 'scale(.97, .97)'
-    this.setState({
+    setState({
       rootSize: { height: String(v_height + 60) + 'pt' },
       size: {
         width: String(v_width) + 'pt',
@@ -68,70 +85,54 @@ class DevicePreview extends Component {
         height: String(v_height) + 'pt',
       },
     })
-  }
+  }, [props])
 
-  initialize(props) {
-    settings.width = props.width
-    settings.height = props.height
-    settings.depth = props.depth
-    settings.inch = props.inch
-    settings.weight = props.weight
-    settings.isMobile = props.isMobile
-  }
-
-  decideZoomLevel(isMobile) {
-    let window_width = window.outerWidth
-    let ZOOM = 0
-    ZOOM = window_width < 1024 ? window_width / 180 : 3.00
-
-    if (!isMobile) {
-      ZOOM /= window_width < 1024 ? 3.4 : 1.55
-    }
-    return ZOOM
-  }
-
-  render() {
-    return (
-      <div className={styles.root} style={this.state.rootSize}>
-        <div className={styles.wrapper}>
-          <div style={this.state.side_view_size} className={styles.side}>
-            <p className={`${styles.text} ${styles.text_depth}`}>
-              <span className={styles.caption}>厚さ</span>
-              <br />
-              {settings.depth + 'mm'}
-            </p>
-          </div>
-          <div style={this.state.size} className={styles.device_body}>
-            <p className={`${styles.text} ${styles.text_width}`}>
-              <span className={styles.caption}>横幅</span>
-              <br />
-              {settings.width + 'mm'}
-            </p>
-            <div className={styles.device_window} style={this.state.window_size}>
-              <span className={styles.window_text}>
-                {settings.inch}
-                <p>インチ</p>
-              </span>
-              <div className={styles.device_window_inner} style={this.state.window_border}></div>
-            </div>
-          </div>
-          <p style={this.state.caption_area} className={`${styles.text} ${styles.text_height}`}>
-            <span>
-              <span className={styles.caption}>高さ</span>
-              <br />
-              {settings.height + 'mm'}
-            </span>
-            <span className={`${styles.text} ${styles.text_weight}`}>
-              <span className={styles.caption}>重さ</span>
-              <br />
-              {settings.weight + 'g'}
-            </span>
+  return (
+    <div className={styles.root} style={state.rootSize}>
+      <div className={styles.wrapper}>
+        <div style={state.side_view_size} className={styles.side}>
+          <p className={`${styles.text} ${styles.text_depth}`}>
+            <span className={styles.caption}>厚さ</span>
+            <br />
+            {settings.depth + 'mm'}
           </p>
         </div>
-        <p className={styles.notifyText}>実際のサイズや形状とは異なることがあります。</p>
+        <div style={state.size} className={styles.device_body}>
+          <p className={`${styles.text} ${styles.text_width}`}>
+            <span className={styles.caption}>横幅</span>
+            <br />
+            {settings.width + 'mm'}
+          </p>
+          <div className={styles.device_window} style={state.window_size}>
+            <span className={styles.window_text}>
+              {settings.inch}
+              <p>インチ</p>
+            </span>
+            <div
+              className={styles.device_window_inner}
+              style={state.window_border}
+            ></div>
+          </div>
+        </div>
+        <p
+          style={state.caption_area}
+          className={`${styles.text} ${styles.text_height}`}
+        >
+          <span>
+            <span className={styles.caption}>高さ</span>
+            <br />
+            {settings.height + 'mm'}
+          </span>
+          <span className={`${styles.text} ${styles.text_weight}`}>
+            <span className={styles.caption}>重さ</span>
+            <br />
+            {settings.weight + 'g'}
+          </span>
+        </p>
       </div>
-    )
-  }
+      <p className={styles.notifyText}>
+        実際のサイズや形状とは異なることがあります。
+      </p>
+    </div>
+  )
 }
-
-export default DevicePreview

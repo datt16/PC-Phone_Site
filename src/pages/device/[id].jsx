@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
       )
     }
-    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
   }
 
   return (
