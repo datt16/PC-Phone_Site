@@ -14,12 +14,12 @@ export default function Home() {
   const [open, setOpen] = useState(false)
 
   const handlerModalOepn = () => {
+    key++
     document.body.style.overflow = 'hidden'
     setOpen(true)
   }
 
   const handlerModalClose = () => {
-    key++
     document.body.style.overflow = ''
     setOpen(false)
   }
