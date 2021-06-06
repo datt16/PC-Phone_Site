@@ -11,6 +11,15 @@ let settings = {
 }
 
 const DevicePreview = (props) => {
+  const initialize = (props) => {
+    settings.width = props.width
+    settings.height = props.height
+    settings.depth = props.depth
+    settings.inch = props.inch
+    settings.weight = props.weight
+    settings.isMobile = props.isMobile
+  }
+
   initialize(props)
   const [state, setState] = useState({
     rootSize: {
@@ -46,15 +55,6 @@ const DevicePreview = (props) => {
       ZOOM /= window_width < 1024 ? 3.4 : 1.55
     }
     return ZOOM
-  }
-
-  const initialize = (props) => {
-    settings.width = props.width
-    settings.height = props.height
-    settings.depth = props.depth
-    settings.inch = props.inch
-    settings.weight = props.weight
-    settings.isMobile = props.isMobile
   }
 
   useEffect(() => {
