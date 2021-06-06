@@ -10,7 +10,7 @@ let settings = {
   isMobile: true,
 }
 
-export const DevicePreview = (props) => {
+const DevicePreview = (props) => {
   initialize(props)
   const [state, setState] = useState({
     rootSize: {
@@ -136,3 +136,5 @@ export const DevicePreview = (props) => {
     </div>
   )
 }
+
+export default DevicePreview
