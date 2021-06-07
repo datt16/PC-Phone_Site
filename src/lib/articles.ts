@@ -1,3 +1,27 @@
+export type articleType = {
+  id: string
+  name: string
+  height: number
+  width: number
+  thickness: number
+  weight: number
+  screen: number
+  image: string
+  type: string
+  cpu: Array<string>
+  ram: Array<string>
+  storage: Array<string>
+  battery: string
+  camera: Array<string>
+  biometrics: Array<string>
+  ipCode: Array<string>
+  gpu: Array<string>
+  hasEarphone: boolean
+  charge: string
+  tags: Array<string>
+  content: string
+}
+
 const data = [
   {
     id: 'A5-Pro-CC',

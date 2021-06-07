@@ -1,6 +1,6 @@
 import articles from './articles'
 
-const search = function search(tag, type) {
+const search = function search(tag:string, type?:string) {
   let list = articles
   if (type !== '') { list = articles.filter((a) => a.type === type) }
   return list.filter((article) => {

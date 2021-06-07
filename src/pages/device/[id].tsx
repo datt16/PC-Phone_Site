@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Device.module.css'
-import articles from '../../lib/articles'
+import articles, { articleType } from '../../lib/articles'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
@@ -15,26 +15,34 @@ export default function Home() {
   const { id } = router.query
   const article = articles.find((a) => a.id == id)
 
-  const tags = []
-  article.tags.forEach((t, idx) => {
-    tags.push(
-      <span key={idx} className={styles.tag}>
-        #{t}
-      </span>
-    )
-  })
+  const tags: Array<JSX.Element> = []
+  if (article)
+    article.tags.forEach((t, idx) => {
+      tags.push(
+        <span key={idx} className={styles.tag}>
+          #{t}
+        </span>
+      )
+    })
 
-  const linkBlock = ({ href, children }) => {
+  type LinkBlockType = {
+    href: string
+    children: React.ReactNode
+  }
+
+  const linkBlock = ({ href, children }: LinkBlockType) => {
     if (href.startsWith('/')) {
       return (
         <Link href={href}>
-          <a>
-            { children }
-          </a>
+          <a>{children}</a>
         </Link>
       )
     }
-    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    )
   }
 
   return (
@@ -47,9 +55,9 @@ export default function Home() {
           </Head>
 
           <main className={styles.main}>
-            {article.image &&
+            {article.image && (
               <img className={styles.img} src={article.image} />
-            }
+            )}
             <article className={styles.article}>
               <h1>{article.name}</h1>
               <p className={styles.tags}>
@@ -113,7 +121,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: articleType }) {
   return {
     props: articles.find((a) => a.id == params.id),
   }

@@ -6,7 +6,13 @@ import { RiCpuLine } from 'react-icons/ri'
 import { MdSdStorage } from 'react-icons/md'
 import styles from '../styles/DeviceSpec.module.scss'
 
-const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
+type PropType = {
+  name: string
+  type: string
+  value: any
+}
+
+const DeviceSpecCard = function DeviceSpecCard({ name, type, value }: PropType) {
   let icon = <FiMinus size={30} />
   let iconText = 'Unknown'
   switch (name) {
@@ -17,7 +23,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'ram':
       icon = <FaMemory size={30} />
       iconText = 'RAM'
-      value = value.filter(v => v != '')
+      value = value.filter((v:string) => v != '')
       break
     case 'battery':
       icon = <FaBatteryThreeQuarters size={30} />
@@ -30,7 +36,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
     case 'storage':
       icon = <MdSdStorage size={30} />
       iconText = 'ストレージ'
-      value = value.filter(v => v != '')
+      value = value.filter((v: string) => v != '')
       break
     case 'camera':
       icon = <FiCamera size={30} />
@@ -51,7 +57,7 @@ const DeviceSpecCard = function DeviceSpecCard({ name, type, value }) {
       break
     case 'ipCode':
       iconText = '防水防塵'
-      value = value.sort().filter(v => v != '')
+      value = value.sort().filter((v:string) => v != '')
       if (value.length == 0) {
         value = <FiX size={60} />
       }

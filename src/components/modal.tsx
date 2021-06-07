@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import styles from '../styles/Modal.module.css'
 
-export default function Modal(props) {
+type PropType = {
+  open: boolean
+  handleClose: () => void
+  children?: React.ReactNode
+}
+
+export default function Modal(props: PropType) {
   const [isOpen, setOpen] = useState(props.open)
   const hide = () => {
     props.handleClose()
